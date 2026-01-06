@@ -1,0 +1,59 @@
+@import '../libs/variables';
+@import '../libs/mixins';
+
+.section-messages {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: .4em 2em;
+  display: flex;
+
+  @include respond-to(large) {
+    padding-top: .8em;
+    padding-bottom: .8em;
+  }
+
+  @include respond-to(small) {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+}
+
+.messages {
+  grid-column-gap: 1.87em;
+  flex-flow: row;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+  &.info {
+    background-color: $w-color-positive-100;
+  }
+
+  &.success {
+    background-color: $w-color-info-100;
+  }
+
+  &.warning {
+    background-color: $w-color-warning-100;
+  }
+
+  &.error {
+    background-color: $w-color-critical-100;
+  }
+
+  @include respond-to(small) {
+    grid-row-gap: .6em;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.item-messages {
+  opacity: .7;
+  color: $white;
+  letter-spacing: -.02em;
+  font-size: .87em;
+  line-height: $line-height-small;
+}

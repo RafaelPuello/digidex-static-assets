@@ -1,0 +1,111 @@
+@import '../libs/variables';
+@import '../libs/mixins';
+
+.grid-banner {
+  grid-column-gap: 0em;
+  grid-row-gap: 0em;
+  background-color: $primary-a1;
+  border-radius: .87em;
+  grid-template-rows: auto;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  @include respond-to(medium) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.block-banner {
+  z-index: 50;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  padding-left: 12%;
+  display: flex;
+  position: relative;
+
+  @include respond-to(medium) {
+    padding: 4em 10%;
+  }
+
+  @include respond-to(small) {
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+  }
+}
+
+.lottie-banner {
+  position: absolute;
+  inset: -6% 0% auto auto;
+
+  @include respond-to(medium) {
+    position: relative;
+    top: 0%;
+  }
+}
+
+.lines-d1 {
+  z-index: 5;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  padding-left: 8%;
+  padding-right: 8.5%;
+  display: flex;
+  position: absolute;
+  inset: 0%;
+}
+
+.lines-d2 {
+  z-index: 5;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  padding-top: 14%;
+  padding-bottom: 14%;
+  display: flex;
+  position: absolute;
+  inset: 0%;
+}
+
+.block-lottie-banner {
+  z-index: 10;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.line-banner-w {
+  background-image: linear-gradient(#fff0, #fff3 10% 90%, #fff0);
+  width: 1px;
+}
+
+.line-banner-h {
+  background-image: linear-gradient(to right, #fff0, #fff3 10% 90%, #fff0);
+  height: 1px;
+}
+
+.lottie-animation-1-banner {
+  width: 100%;
+}
+
+.lottie-animation-2-banner {
+  z-index: 10;
+  width: 100%;
+  position: absolute;
+  inset: 0%;
+}
+
+.lottie-animation-2-blur-banner {
+  z-index: 5;
+  filter: blur(50px);
+  width: 100%;
+  position: absolute;
+  inset: 0%;
+}

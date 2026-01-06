@@ -1,0 +1,37 @@
+@import '../libs/variables';
+@import '../libs/mixins';
+
+.subtitle {
+  background-color: $white;
+  color: $heading;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  border-radius: .6em;
+  margin-bottom: .7em;
+  padding: .5em 1em;
+  font-family: $w-font-mono;
+  font-size: .7em;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-normal;
+  box-shadow: 0 10px 20px -10px $shadow-c1;
+
+  &.red {
+    background-color: $secondary-b2;
+    color: $primary-a2;
+  }
+
+  &.blue {
+    background-color: $secondary-b3;
+    color: $primary-a3;
+  }
+
+  &.green {
+    background-color: $secondary-b1;
+    color: $primary-a1;
+  }
+
+  &.white {
+    background-color: #ffffff1a;
+    color: $primary-a1;
+  }
+}

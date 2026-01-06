@@ -1,0 +1,96 @@
+@import '../libs/variables';
+@import '../libs/mixins';
+
+.grid-about {
+  grid-column-gap: 1.5em;
+  grid-row-gap: 1.5em;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: start;
+
+  @include respond-to(large) {
+    grid-column-gap: 1.13em;
+    grid-row-gap: 1.13em;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include respond-to(medium) {
+    grid-column-gap: .87em;
+    grid-row-gap: .87em;
+    grid-template-columns: 1fr;
+  }
+}
+
+.about {
+  grid-row-gap: 1.2em;
+  border-radius: .87em;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 3.1em;
+  display: flex;
+  position: relative;
+
+  @include respond-to(small) {
+    padding: 2em;
+  }
+
+  &.red {
+    color: $primary-a2;
+    background-color: $secondary-b2;
+  }
+
+  &.blue {
+    background-color: $secondary-b3;
+    color: $primary-a3;
+  }
+
+  &.green {
+    background-color: $secondary-b1;
+    color: $primary-a1;
+  }
+}
+
+.block-icon-about {
+  border-radius: .87em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 4.5em;
+  height: 4.5em;
+  display: flex;
+
+  &.red {
+    background-color: $primary-a2;
+  }
+
+  &.blue {
+    background-color: $primary-a3;
+  }
+
+  &.green {
+    background-color: $primary-a1;
+  }
+}
+
+
+.icon-about {
+  width: 2em;
+  height: 2em;
+}
+
+.heading-about {
+  color: $primary-a1;
+
+  &.red {
+    color: $primary-a2;
+  }
+
+  &.blue {
+    color: $primary-a3;
+  }
+
+  &.green {
+    color: $primary-a1;
+  }
+}

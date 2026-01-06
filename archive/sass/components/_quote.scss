@@ -1,0 +1,26 @@
+@import '../libs/variables';
+@import '../libs/mixins';
+
+.heading-quote {
+  margin-bottom: 1.4em;
+}
+
+.block-quote {
+  grid-column-gap: 1.25em;
+  grid-row-gap: 1.25em;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+}
+
+.block-name {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  display: flex;
+}
+
+.signature {
+  height: 3.7em;
+}

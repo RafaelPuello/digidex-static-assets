@@ -1,0 +1,101 @@
+@import '../libs/variables';
+@import '../libs/mixins';
+
+.block-reviews {
+  grid-column-gap: .88em;
+  grid-row-gap: .88em;
+  flex-direction: row;
+  height: 40em;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+
+  @include respond-to(medium) {
+    flex-direction: column;
+  }
+
+  @include respond-to(small) {
+    padding: 3em 1.5em 2.5em;
+  }
+}
+
+.review-left {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  width: 100%;
+  display: flex;
+}
+
+.review {
+  grid-column-gap: .94em;
+  grid-row-gap: .94em;
+  background-color: $white;
+  border-radius: .87em;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: .44em;
+  margin-bottom: .44em;
+  padding: 2em;
+  display: flex;
+  box-shadow: 0 15px 25px -10px $shadow-c1;
+
+  @include respond-to(medium) {
+    padding: 1.6em;
+  }
+}
+
+.paragraph-review {
+  font-size: .87em;
+  line-height: 155%;
+}
+
+.review-name {
+  color: $heading;
+  letter-spacing: -.02em;
+  font-size: .87em;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-normal;
+}
+
+.stars {
+  grid-column-gap: .25em;
+  grid-row-gap: .25em;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+}
+
+.icon-star {
+  width: 1.13em;
+  height: 1.13em;
+}
+
+.reviews-wrapper {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  width: 100%;
+  display: flex;
+
+  &.right {
+    justify-content: flex-end;
+  }
+}
+
+.review-right {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  width: 100%;
+  display: flex;
+}
+
+.gradient-reviews {
+  z-index: 50;
+  background-image: linear-gradient(to bottom, $background, #f4f6f700 10%, #f4f6f700 90%, $background);
+  position: absolute;
+  inset: 0%;
+}

@@ -1,0 +1,45 @@
+@import '../libs/variables';
+@import '../libs/mixins';
+
+.text-info {
+  color: $heading;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin-left: 1em;
+  margin-right: 1em;
+  font-family: $w-font-mono;
+  font-size: .7em;
+  font-weight: $font-weight-normal;
+  line-height: 110%;
+}
+
+.link-info {
+  background-color: $white;
+  border-radius: 50em;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: .8em;
+  padding: 3px;
+  text-decoration: none;
+  transition: background-color .3s cubic-bezier(.25, .46, .45, .94);
+  display: flex;
+
+  &:hover {
+    background-color: $primary-a4;
+  }
+}
+
+.block-icon-info {
+  background-color: $primary-a4;
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+  width: 1.375em;
+  height: 1.375em;
+  display: flex;
+}
+
+.icon-info {
+  width: 1em;
+  height: 1em;
+}

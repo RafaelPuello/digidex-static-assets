@@ -1,0 +1,55 @@
+@import '../libs/variables';
+@import '../libs/mixins';
+
+.link {
+  border-bottom: 1px solid $primary-a1;
+  color: $primary-a1;
+  text-decoration: none;
+  transition: border-color .3s cubic-bezier(.25, .46, .45, .94), color .3s cubic-bezier(.25, .46, .45, .94);
+
+  &:hover {
+    border-bottom-color: $heading;
+    color: $heading;
+  }
+}
+
+.text-link {
+  color: $primary-a1;
+  letter-spacing: -.02em;
+  font-size: 1em;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-small;
+}
+
+.icon-link {
+  width: 1em;
+  height: 1em;
+}
+
+.block-icon-link {
+  background-color: $secondary-b1;
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+  width: 1.375em;
+  height: 1.375em;
+  display: flex;
+}
+
+.link-block {
+  grid-column-gap: .5em;
+  border-radius: 50px;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: .3em;
+  padding-bottom: .3em;
+  padding-right: .3em;
+  text-decoration: none;
+  transition: background-color .3s cubic-bezier(.25, .46, .45, .94), padding .3s cubic-bezier(.25, .46, .45, .94);
+  display: flex;
+
+  &:hover {
+    background-color: $secondary-b1;
+    padding-left: 1em;
+  }
+}

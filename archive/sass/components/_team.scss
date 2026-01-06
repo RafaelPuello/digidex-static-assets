@@ -1,0 +1,71 @@
+@import '../libs/variables';
+@import '../libs/mixins';
+
+.grid-team {
+  grid-column-gap: 1.5em;
+  grid-row-gap: 1.5em;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: start;
+
+  @include respond-to(small) {
+    grid-column-gap: .6em;
+    grid-row-gap: .6em;
+  }
+
+  @include respond-to(medium) {
+    grid-column-gap: .87em;
+    grid-row-gap: .87em;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include respond-to(large) {
+    grid-column-gap: 1.13em;
+    grid-row-gap: 1.13em;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.team {
+  background-color: $white;
+  border-radius: .87em;
+  padding: 1em;
+  box-shadow: 0 15px 25px -10px $shadow-c1;
+
+  @include respond-to(small) {
+    padding: 0;
+  }
+}
+
+.image-team {
+  object-fit: cover;
+  border-radius: .6em;
+}
+
+.block-team {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1.3em 1em .6em;
+  display: flex;
+
+  @include respond-to(small) {
+    padding: .9em 1.2em;
+    font-size: .9em;
+  }
+}
+
+.heading-name {
+  margin-bottom: .3em;
+  line-height: $line-height-small;
+}
+
+.text-role {
+  color: #141718b3;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  font-family: $w-font-mono;
+  font-size: .7em;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-normal;
+}

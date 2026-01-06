@@ -1,0 +1,133 @@
+@import '../libs/variables';
+@import '../libs/mixins';
+
+.form-block {
+  width: 100%;
+  margin-top: .4em;
+  margin-bottom: 0;
+}
+
+.form {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  display: flex;
+}
+
+.text-field {
+  border: 1px solid $border;
+  background-color: $white;
+  color: $heading;
+  border-radius: .87em;
+  height: 3.75em;
+  margin-bottom: 1.12em;
+  padding: 1em 1.2em;
+  font-size: 1em;
+  line-height: $line-height-normal;
+  transition: border-color .3s cubic-bezier(.25, .46, .45, .94);
+
+  @include respond-to(medium) {
+    margin-bottom: .9em;
+  }
+
+  &:focus {
+    border-color: $primary-a1;
+  }
+
+  &::placeholder {
+    color: $translucent-h1;
+  }
+
+  &.transparent {
+    color: $white;
+    background-color: #ffffff1a;
+    border-color: #fff3;
+  
+    &:focus {
+      border-color: $white;
+    }
+  
+    &::placeholder {
+      color: #ffffffa6;
+    }
+  }
+}
+
+.textarea {
+  border: 1px solid $border;
+  background-color: $white;
+  color: $heading;
+  border-radius: .87em;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 14em;
+  max-height: 30em;
+  margin-bottom: 1.12em;
+  padding: 1em 1.2em;
+  font-size: 1em;
+  line-height: $line-height-normal;
+  transition: border-color .3s cubic-bezier(.25, .46, .45, .94);
+
+  &:focus {
+    border-color: $primary-a1;
+  }
+
+  &::placeholder {
+    color: $translucent-h1;
+  }
+}
+
+.error-message {
+  background-color: $w-color-critical-100;
+  border-radius: .87em;
+  margin-top: 1em;
+  padding: 1em 10%;
+
+  &.yellow {
+    border: 1px dashed $primary-a4;
+    background-color: #0000;
+  }
+}
+
+.text-error {
+  color: $w-color-critical-200;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  font-family: $w-font-mono;
+  font-size: .7em;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-normal;
+
+  &.yellow {
+    color: $primary-a4;
+  }
+}
+
+.success-message {
+  background-color: $secondary-b3;
+  border-radius: .87em;
+  padding: 1.5em 10%;
+
+  &.yellow {
+    border: 1px dashed $primary-a4;
+    background-color: #0000;
+  }
+}
+
+.text-success {
+  color: $primary-a3;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  font-family: $w-font-mono;
+  font-size: .7em;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-normal;
+
+  &.yellow {
+    color: $primary-a4;
+  }
+}
+
+.text-success.yellow {
+  color: $primary-a4;
+}

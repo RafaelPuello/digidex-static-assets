@@ -1,0 +1,154 @@
+@import 'libs/variables';
+@import 'libs/mixins';
+
+.grid-solutions {
+  grid-column-gap: 1.5em;
+  grid-row-gap: 1.5em;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: start;
+
+  @include respond-to(large) {
+    grid-column-gap: 1.13em;
+    grid-row-gap: 1.13em;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include respond-to(medium) {
+    grid-column-gap: .87em;
+    grid-row-gap: .87em;
+  }
+
+  @include respond-to(small) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.solutions {
+  grid-row-gap: 1.2em;
+  background-color: $white;
+  border-radius: .87em;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 2.5em;
+  display: flex;
+  position: relative;
+  box-shadow: 0 15px 25px -10px $shadow-c1;
+
+  @include respond-to(medium) {
+    padding: 2.2em;
+  }
+
+  @include respond-to(small) {
+    padding: 2em;
+  }
+}
+
+.icon-solution {
+  width: 2em;
+  height: 2em;
+}
+
+.grid-solutions-large {
+  grid-column-gap: 1.5em;
+  grid-row-gap: 1.5em;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  margin-bottom: 1.5em;
+
+  @include respond-to(large) {
+    grid-column-gap: 1.13em;
+    grid-row-gap: 1.13em;
+  }
+
+  @include respond-to(medium) {
+    grid-column-gap: .87em;
+    grid-row-gap: .87em;
+    grid-template-columns: 1fr;
+    margin-bottom: .87em;
+  }
+}
+
+.solutions-large {
+  grid-row-gap: 1.2em;
+  border-radius: .87em;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 3.1em;
+  display: flex;
+  position: relative;
+
+  @include respond-to(small) {
+    padding: 2em;
+  }
+
+  &.red {
+    background-color: $secondary-b2;
+  }
+
+  &.blue {
+    background-color: $secondary-b3;
+  }
+
+  &.green {
+    background-color: $secondary-b1;
+  }
+}
+
+.heading-solution-large {
+  color: $primary-a1;
+
+  &.red {
+    color: $primary-a2;
+  }
+
+  &.blue {
+    color: $primary-a3;
+  }
+
+  &.green {
+    color: $primary-a1;
+  }
+}
+.paragraph-solution-large {
+  color: $primary-a1;
+
+  color: $primary-a1;
+
+  &.red {
+    color: $primary-a2;
+  }
+
+  &.blue {
+    color: $primary-a3;
+  }
+
+  &.green {
+    color: $primary-a1;
+  }
+}
+
+.block-icon-solution {
+  border-radius: .87em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 4.5em;
+  height: 4.5em;
+  display: flex;
+
+  &.red {
+    color: $primary-a2;
+  }
+
+  &.blue {
+    color: $primary-a3;
+  }
+
+  &.green {
+    color: $primary-a1;
+  }
+}

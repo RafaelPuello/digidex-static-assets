@@ -1,0 +1,167 @@
+@import '../libs/variables';
+@import '../libs/mixins';
+
+.ecommerce-form {
+  background-color: #0000;
+  min-height: auto;
+  padding: 0;
+}
+
+.ecommerce-grid {
+  grid-column-gap: 1.5em;
+  grid-row-gap: 1.5em;
+  grid-template-rows: auto;
+  grid-template-columns: 2fr 1fr;
+  align-items: start;
+  width: 100%;
+
+  @include respond-to(medium) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ecommerce-contents {
+  grid-column-gap: 1.5em;
+  grid-row-gap: 1.5em;
+  flex-direction: column;
+  margin-right: 0;
+  display: flex;
+}
+
+.ecommerce-sidebar {
+  top: 100px;
+}
+
+.ecommerce-block {
+  background-color: $white;
+  border-radius: .87em;
+  margin-top: 0;
+  margin-bottom: 0;
+  box-shadow: 0 15px 25px -10px $shadow-c1;
+}
+
+.block-header {
+  border-style: none none solid;
+  border-color: $border;
+  background-color: #0000;
+  padding: 1em 1.5em;
+}
+
+.block-content {
+  background-color: #0000;
+  border: 1px #000;
+  padding: 1.5em;
+}
+
+.order-summary {
+  background-color: $white;
+  border-radius: .87em;
+  margin-bottom: 1.5em;
+  box-shadow: 0 15px 25px -10px $shadow-c1;
+}
+
+.text-required {
+  color: $primary-a3;
+  font-size: .9em;
+  font-weight: $font-weight-normal;
+  line-height: 155%;
+}
+
+.text-field-ecommerce {
+  border: 1px solid $border;
+  background-color: $background;
+  color: $heading;
+  border-radius: .87em;
+  height: 3.75em;
+  margin-bottom: 1.12em;
+  padding: 1em 1.2em;
+  font-size: $font-size-base;
+  line-height: $line-height-normal;
+  transition: border-color .3s cubic-bezier(.25, .46, .45, .94);
+
+  @include respond-to(medium) {
+    margin-bottom: .9em;
+  }
+
+  &::placeholder {
+    color: #14171899;
+  }
+
+  &:focus {
+    border-color: $primary-a1;
+  }
+
+  &.-wfp-focus {
+    border-color: $primary-a1;
+  }
+}
+
+.country {
+  border: 1px solid $border;
+  background-color: $background;
+  color: $heading;
+  border-radius: .87em;
+  height: 3.75em;
+  margin-bottom: 1.12em;
+  padding: 1em 1.2em;
+  font-size: $font-size-base;
+  line-height: $line-height-normal;
+  transition: border-color .3s cubic-bezier(.25, .46, .45, .94);
+
+  &:focus {
+    border-color: $primary-a1;
+  }
+}
+
+.billing-address-toggle {
+  align-items: baseline;
+}
+
+.shipping-method-list {
+  grid-column-gap: .7em;
+  grid-row-gap: .7em;
+  border: 1px #000;
+  flex-direction: column;
+  justify-content: flex-start;
+  display: flex;
+}
+
+.shipping-method {
+  background-color: $secondary-b1;
+  border: 1px #000;
+  border-radius: .87em;
+  margin-bottom: 0;
+  padding: 1em 1.2em;
+}
+
+.block-quantity {
+  font-size: .9em;
+}
+
+.discounts {
+  border-style: none;
+  border-color: $border;
+  background-color: $white;
+  border-radius: .87em;
+  margin-bottom: 1.5em;
+  padding: 1.5em;
+  box-shadow: 0 15px 25px -10px $shadow-c1;
+}
+
+.apply-button {
+  background-color: $primary-a1;
+  color: $white;
+  letter-spacing: -.02em;
+  border-radius: .87em;
+  height: 3.75em;
+  margin-left: .5em;
+  padding: .9em 1.3em;
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-small;
+  transition: box-shadow .3s cubic-bezier(.25, .46, .45, .94), background-color .3s cubic-bezier(.25, .46, .45, .94);
+
+  &:hover {
+    box-shadow: 0 15px 40px -10px $primary-a1;
+  }
+}

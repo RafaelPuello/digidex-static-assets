@@ -1,0 +1,131 @@
+@import '../libs/variables';
+@import '../libs/mixins';
+
+.lottie {
+  position: relative;
+}
+
+.lines-a1 {
+  z-index: 5;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  padding-left: 6%;
+  padding-right: 10.5%;
+  display: flex;
+  position: absolute;
+  inset: 0%;
+}
+
+.line-w {
+  background-image: linear-gradient(to bottom, #0f649200, $border 10%, $border 90%, #0f649200);
+  width: 1px;
+}
+
+.lines-a2 {
+  z-index: 5;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  padding-top: 11%;
+  padding-bottom: 13%;
+  display: flex;
+  position: absolute;
+  inset: 0%;
+}
+
+.block-lottie {
+  z-index: 10;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.lottie-animation-2 {
+  z-index: 10;
+  width: 100%;
+  position: absolute;
+  inset: 0%;
+}
+
+.lottie-animation-1 {
+  width: 100%;
+}
+
+.lottie-animation-2-blur {
+  z-index: 5;
+  filter: blur(50px);
+  width: 100%;
+  position: absolute;
+  inset: 0%;
+}
+
+.lines-b1 {
+  z-index: 5;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  padding-left: 4%;
+  padding-right: 13%;
+  display: flex;
+  position: absolute;
+  inset: 0%;
+}
+
+.lines-b2 {
+  z-index: 5;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  padding-top: 12%;
+  padding-bottom: 12%;
+  display: flex;
+  position: absolute;
+  inset: 0%;
+}
+
+.lottie-wrapper {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.lines-c1 {
+  z-index: 5;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  padding-left: 22%;
+  padding-right: 22%;
+  display: flex;
+  position: absolute;
+  inset: 0%;
+}
+
+.lines-c2 {
+  z-index: 5;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  padding-top: 15%;
+  padding-bottom: 15%;
+  display: flex;
+  position: absolute;
+  inset: 0%;
+}
+
+.line-h {
+  background-image: linear-gradient(to right, #0f649200, $border 10%, $border 90%, #0f649200);
+  height: 1px;
+}
+
+.line-banner-h {
+  background-image: linear-gradient(to right, #fff0, #fff3 10% 90%, #fff0);
+  height: 1px;
+}

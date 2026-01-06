@@ -1,0 +1,122 @@
+@import 'libs/variables';
+@import 'libs/mixins';
+
+.contact {
+  z-index: 50;
+  background-color: $white;
+  text-align: center;
+  border-radius: .87em;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  max-width: 42em;
+  margin-top: -.5em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3.1em;
+  display: flex;
+  position: relative;
+  box-shadow: 0 15px 25px -10px $shadow-c1;
+
+  @include respond-to(small) {
+    padding: 2em;
+  }
+}
+
+.contact-lottie {
+  z-index: 20;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 6%;
+  padding-bottom: 6%;
+  display: flex;
+  position: absolute;
+  inset: 0%;
+}
+
+.contact-lottie-link {
+  grid-column-gap: 1.44em;
+  background-color: $secondary-b1;
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
+  border-radius: .64em;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 18em;
+  margin-right: 28%;
+  padding-top: .87em;
+  padding-bottom: .87em;
+  padding-right: 2em;
+  text-decoration: none;
+  transition: box-shadow .3s cubic-bezier(.25, .46, .45, .94);
+  display: flex;
+
+  @include respond-to(small) {
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    min-width: 15em;
+    margin-right: 0%;
+    font-size: .9em;
+  }
+
+  &:hover {
+    box-shadow: inset 0 0 0 2px $primary-a1;
+  }
+
+  &.a2 {
+    margin-right: -33%;
+  
+    @include respond-to(small) {
+      margin-right: 0%;
+    }
+  }
+
+  &.a3 {
+    margin-right: 16%;
+  
+    @include respond-to(small) {
+      margin-right: 0%;
+    }
+  }
+}
+
+.icon-contact-lottie {
+  width: 2em;
+  height: 2em;
+}
+
+.block-icon-contact-lottie {
+  background-color: $white;
+  border-radius: .87em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: -.94em;
+  padding: 1.1em;
+  display: flex;
+  box-shadow: 0 15px 25px -10px $shadow-c1;
+}
+
+.heading-contact-lottie {
+  color: $primary-a1;
+  font-weight: $font-weight-normal;
+}
+
+.block-heading-contact-lottie {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  display: flex;
+}
+
+.text-contact-lottie {
+  opacity: .5;
+  color: $primary-a1;
+  letter-spacing: -.02em;
+  max-width: 11em;
+  font-size: .87em;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-normal;
+}

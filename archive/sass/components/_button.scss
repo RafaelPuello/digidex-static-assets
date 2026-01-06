@@ -1,0 +1,173 @@
+@import '../libs/variables';
+@import '../libs/mixins';
+
+.button {
+  background-color: $primary-a1;
+  color: $white;
+  letter-spacing: -.02em;
+  border-radius: 50em;
+  padding: .9em 1.8em;
+  @extend %button-shared;
+  transition: box-shadow .3s cubic-bezier(.25, .46, .45, .94), background-color .3s cubic-bezier(.25, .46, .45, .94);
+
+  &:hover {
+    box-shadow: 0 15px 40px -10px $primary-a1;
+  }
+
+  &.small {
+    background-color: $primary-a1;
+    color: $white;
+    letter-spacing: -.02em;
+    border-radius: 50em;
+    padding: .7em 1.4em;
+    font-size: 1em;
+    font-weight: $font-weight-normal;
+    line-height: $line-height-small;
+    transition: box-shadow .3s cubic-bezier(.25, .46, .45, .94), background-color .3s cubic-bezier(.25, .46, .45, .94);
+  
+    &:hover {
+      box-shadow: 0 15px 40px -10px $primary-a1;
+    }
+  }
+}
+
+.button-yellow {
+  background-color: $primary-a4;
+  color: $heading;
+
+  &:hover {
+    box-shadow: 0 15px 40px -10px $primary-a4;
+  }
+
+  &.small {
+    background-color: $primary-a4;
+    color: $heading;
+    
+    &:hover {
+      box-shadow: 0 15px 40px -10px $primary-a4;
+    }
+  }
+}
+
+.button-dark {
+  background-color: $heading;
+
+  &:hover {
+    background-color: $primary-a1;
+  }
+
+  &.small {
+    background-color: $heading;
+  }
+
+  &.small:hover {
+    background-color: $primary-a1;
+  }
+}
+
+.button-link {
+  grid-column-gap: .4em;
+  border-radius: 50em;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: .9em;
+  text-decoration: none;
+  transition: box-shadow .3s cubic-bezier(.25, .46, .45, .94), padding .3s cubic-bezier(.25, .46, .45, .94);
+  display: flex;
+
+  &:hover {
+    box-shadow: inset 0 0 0 2px $primary-a1;
+    padding-left: 1.6em;
+    padding-right: 1.6em;
+  }
+}
+
+.button-icon {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.button-text {
+  color: $primary-a1;
+  letter-spacing: -.02em;
+  font-size: 1.12em;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-small;
+}
+
+.button-submit {
+  background-color: $primary-a1;
+  color: $white;
+  letter-spacing: -.02em;
+  border-radius: .87em;
+  padding: 1.2em 1.8em;
+  font-size: 1.12em;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-small;
+  transition: box-shadow .3s cubic-bezier(.25, .46, .45, .94), background-color .3s cubic-bezier(.25, .46, .45, .94);
+
+  &:hover {
+    box-shadow: 0 15px 40px -10px $primary-a1;
+  }
+
+  &.yellow {
+    background-color: $primary-a4;
+    color: $heading;
+
+    &:hover {
+      box-shadow: 0 15px 40px -10px $primary-a4;
+    }
+  }
+}
+
+.block-button {
+  grid-column-gap: .8em;
+  grid-row-gap: .8em;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 1em;
+  display: flex;
+
+  @include respond-to(small) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.button-outline {
+  box-shadow: 0 0 0 -10px $primary-a1, inset 0 0 0 2px $primary-a1;
+  color: $primary-a1;
+  letter-spacing: -.02em;
+  background-color: #0000;
+  border-radius: 50em;
+  padding: .9em 1.8em;
+  @extend %button-shared;
+  transition: box-shadow .3s cubic-bezier(.25, .46, .45, .94), color .3s cubic-bezier(.25, .46, .45, .94), background-color .3s cubic-bezier(.25, .46, .45, .94);
+
+  &:hover {
+    background-color: $primary-a1;
+    box-shadow: 0 15px 40px -10px $primary-a1, inset 0 0 0 2px $primary-a1;
+    color: $white;
+  }
+
+  &.small {
+    box-shadow: 0 0 0 -10px $primary-a1, inset 0 0 0 2px $primary-a1;
+    color: $primary-a1;
+    letter-spacing: -.02em;
+    background-color: #0000;
+    border-radius: 50em;
+    padding: .7em 1.4em;
+    font-size: 1em;
+    font-weight: $font-weight-normal;
+    line-height: $line-height-small;
+    transition: box-shadow .3s cubic-bezier(.25, .46, .45, .94), color .3s cubic-bezier(.25, .46, .45, .94), background-color .3s cubic-bezier(.25, .46, .45, .94);
+  
+    :hover {
+      background-color: $primary-a1;
+      box-shadow: 0 15px 40px -10px $primary-a1, inset 0 0 0 2px $primary-a1;
+      color: $white;
+    }
+  }
+}

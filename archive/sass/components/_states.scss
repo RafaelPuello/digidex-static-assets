@@ -1,0 +1,21 @@
+@import '../libs/variables';
+@import '../libs/mixins';
+
+.empty-state {
+  background-color: $white;
+  text-align: center;
+  border-radius: .87em;
+  padding: 1em 1.4em;
+  box-shadow: 0 15px 25px -10px $shadow-c1;
+}
+
+.text-empty {
+  opacity: .7;
+  color: $heading;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  font-family: $w-font-mono;
+  font-size: .7em;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-normal;
+}

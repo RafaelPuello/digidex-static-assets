@@ -1,0 +1,60 @@
+@import '../libs/variables';
+@import '../libs/mixins';
+
+.clients {
+  text-align: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 3.6em;
+  display: flex;
+}
+
+.subtitle-clients {
+  opacity: .7;
+  color: $heading;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin-bottom: 2.3em;
+  font-family: $w-font-mono;
+  font-size: .7em;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-normal;
+}
+
+.block-clients {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient-clients {
+  z-index: 50;
+  background-image: linear-gradient(to right, $background 5%, #f4f6f700 20%, #f4f6f700 80%, $background 95%);
+  position: absolute;
+  inset: 0%;
+}
+
+.clients-wrapper {
+  flex: none;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+}
+
+.logo-client {
+  max-height: 2.7em;
+  margin-left: 2.7em;
+  margin-right: 2.7em;
+
+
+  @include respond-to(small) {
+    max-height: 1.5em;
+    margin-left: 1.8em;
+    margin-right: 1.8em;
+  }
+}

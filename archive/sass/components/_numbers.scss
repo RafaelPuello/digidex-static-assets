@@ -1,0 +1,86 @@
+@import '../libs/variables';
+@import '../libs/mixins';
+
+.grid-numbers {
+  grid-column-gap: .87em;
+  grid-row-gap: .87em;
+  grid-template-rows: auto;
+  align-items: start;
+
+  @include respond-to(large) {
+    font-size: .9em;
+  }
+
+  @include respond-to(medium) {
+    width: 100%;
+    font-size: 1em;
+  }
+
+  @include respond-to(small) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.numbers {
+  grid-column-gap: .5em;
+  grid-row-gap: .5em;
+  border-radius: .64em;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 1.2em 1.4em 1.4em;
+  display: flex;
+
+  &.red {
+    background-color: $secondary-b2;
+  }
+
+  &.blue {
+    background-color: $secondary-b3;
+  }
+
+  &.green {
+    background-color: $secondary-b1;
+  }
+}
+
+.icon-numbers {
+  width: 2em;
+  height: 2em;
+}
+
+.heading-numbers {
+  font-weight: $font-weight-normal;
+
+  &.red {
+    color: $primary-a2;
+  }
+
+  &.blue {
+    color: $primary-a3;
+  }
+
+  &.green {
+    color: $primary-a1;
+  }
+}
+
+.text-numbers {
+  letter-spacing: -.02em;
+  max-width: 11em;
+  font-size: .87em;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-normal;
+
+  &.red {
+    color: $primary-a2;
+  }
+
+  &.blue {
+    color: $primary-a3;
+  }
+
+  &.green {
+    color: $primary-a1;
+  }
+}

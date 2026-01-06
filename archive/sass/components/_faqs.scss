@@ -1,0 +1,91 @@
+@import '../libs/variables';
+@import '../libs/mixins';
+
+.grid-faq {
+  grid-column-gap: 1.13em;
+  grid-row-gap: 1.13em;
+  grid-template-rows: auto;
+  align-items: start;
+
+  @include respond-to(medium) {
+    grid-column-gap: .87em;
+    grid-row-gap: .87em;
+  }
+
+  @include respond-to(small) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.block-faq {
+  grid-column-gap: 1.13em;
+  grid-row-gap: 1.13em;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  display: flex;
+
+  @include respond-to(medium) {
+    grid-column-gap: .87em;
+    grid-row-gap: .87em;
+  }
+}
+
+.accordion-item {
+  background-color: $white;
+  border-radius: .87em;
+  width: 100%;
+  padding-left: 1.8em;
+  padding-right: 1.2em;
+  box-shadow: 0 15px 25px -10px $shadow-c1;
+}
+
+.accordion-header {
+  grid-column-gap: 1em;
+  cursor: pointer;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  transition: padding .3s cubic-bezier(.25, .46, .45, .94);
+  display: flex;
+
+  &:hover {
+    padding-left: .3em;
+    padding-right: .3em;
+  }
+}
+
+.heading-accordion {
+  margin-top: .3em;
+  margin-bottom: .3em;
+}
+
+.icon-accordion {
+  flex: none;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.block-icon-accordion {
+  background-color: $secondary-b1;
+  border: 1px solid #fff3;
+  border-radius: 100%;
+  flex: none;
+  justify-content: center;
+  align-items: center;
+  width: 2.12em;
+  height: 2.12em;
+  display: flex;
+}
+
+.accordion-content {
+  display: block;
+  overflow: hidden;
+}
+
+.paragraph-accordion {
+  max-width: 90%;
+  margin-bottom: 1.6em;
+}

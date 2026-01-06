@@ -1,0 +1,89 @@
+@import '../libs/variables';
+@import '../libs/mixins';
+
+body {
+  background-color: var(--background);
+  color: var(--paragraph);
+  font-family: $w-font-sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 155%;
+  display: flex;
+
+  @include flex-center(column, center, center);
+
+  @include respond-to(large) {
+    padding-top: 6rem;
+  }
+}
+
+.body-green {
+  background-color: $w-color-primary;
+  padding: 0;
+}
+
+.content {
+  width: 100%;
+  margin-top: calc((16 / 16 * 1rem) + 1rem);
+  margin-bottom: 1em;
+  max-width: 75em;
+}
+
+.content.narrow {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  max-width: 60em;
+  display: flex;
+}
+
+.section {
+  justify-content: center;
+  align-items: center;
+  padding: 3.75em 2em;
+  display: flex;
+
+  @include respond-to(small) {
+    padding: 2.5em 1.5em;
+  }
+
+  @include respond-to(medium) {
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+
+  @include respond-to(large) {
+    padding-top: 4rem;
+  }
+}
+
+.brand {
+  flex: none;
+  margin-right: .5em;
+  padding: .5em .3em;
+}
+
+.logo {
+  max-height: 3.5em;
+  max-width: 3.5em;
+}
+
+.section-full {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  padding: 3.75em 2em;
+  display: flex;
+
+  @include respond-to(medium) {
+    padding-top: 3em;
+  }
+}
+
+.brand-center {
+  flex: none;
+  margin-top: 1.2em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: .5em .3em;
+}

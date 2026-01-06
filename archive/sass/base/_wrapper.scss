@@ -1,0 +1,89 @@
+@import "../libs/variables";
+@import '../libs/mixins';
+
+.heading {
+  max-width: 9em;
+  margin-bottom: .5em;
+}
+
+.heading.large {
+  max-width: 13em;
+}
+
+.heading.banner {
+  color: $white;
+  margin-bottom: .7em;
+}
+
+.paragraph {
+  max-width: 30em;
+  margin-bottom: 2.2em;
+}
+
+.grid {
+  grid-column-gap: 0em;
+  grid-row-gap: 0em;
+  grid-template-rows: auto;
+  align-items: center;
+
+  @include respond-to(medium) {
+    grid-column-gap: 2.5em;
+    grid-row-gap: 2.5em;
+    grid-template-columns: 1fr;
+  }
+}
+
+.block {
+  @extend %block-shared;
+}
+
+.block-right {
+  @extend %block-shared;
+  padding-left: 15%;
+
+  @include respond-to(large) {
+    padding-left: 10%;
+  }
+
+  @include respond-to(medium) {
+    padding-left: 0%;
+  }
+}
+
+.block-left {
+  @extend %block-shared;
+  padding-right: 15%;
+
+  @include respond-to(large) {
+    padding-right: 10%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .block-left {
+    padding-right: 10%;
+  }
+
+  .block-right {
+    padding-left: 10%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .block-right {
+    padding-left: 0%;
+  }
+}
+
+.block-heading {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 1em;
+  display: flex;
+}
+
+.block-heading.center {
+  text-align: center;
+  align-items: center;
+}

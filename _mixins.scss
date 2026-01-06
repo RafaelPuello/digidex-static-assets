@@ -1,0 +1,58 @@
+@use 'variables';
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == small {
+    @media screen and (max-width: 479px) { @content; }
+  } @else if $breakpoint == medium {
+    @media screen and (max-width: 767px) { @content; }
+  } @else if $breakpoint == large {
+    @media screen and (max-width: 991px) { @content; }
+  }
+}
+  
+@mixin flex-center($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin typography-variant($variant) {
+  @if $variant == 'button' {
+    font-size: variables.$btn-font-size;         // e.g. 1.12rem
+    font-weight: variables.$btn-font-weight;       // e.g. $font-weight-normal (500)
+    line-height: variables.$btn-line-height;       // e.g. use $line-height-normal or your defined value
+  } @else if $variant == 'small' {
+    font-size: variables.$font-size-small;         // e.g. .7rem
+    font-weight: variables.$font-weight-light;      // typically 400
+    line-height: variables.$line-height-small;       // e.g. 1.2
+  } @else if $variant == 'medium' {
+    font-size: variables.$font-size-base;          // e.g. 1rem
+    font-weight: variables.$font-weight-base;        // typically 400 (or $font-weight-normal)
+    line-height: variables.$line-height-base;        // e.g. 1.1 (or as defined)
+  } @else if $variant == 'large' {
+    font-size: variables.$font-size-large;         // e.g. 1.125rem
+    font-weight: variables.$font-weight-bold;        // e.g. 700
+    line-height: variables.$line-height-large;       // e.g. 1.6
+  } @else {
+    @warn "Unknown typography variant `#{$variant}`. Falling back to 'medium'.";
+    font-size: variables.$font-size-base;
+    font-weight: variables.$font-weight-base;
+    line-height: variables.$line-height-base;
+  }
+}
+
+%block-shared {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  display: flex;
+}
+
+%button-shared {
+  font-size: variables.$btn-font-size;
+  font-weight: variables.$btn-font-weight;
+  line-height: variables.$btn-line-height;
+  text-decoration: none;
+  display: inline-block;
+}
