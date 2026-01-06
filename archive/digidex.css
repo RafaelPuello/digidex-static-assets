@@ -4114,16 +4114,6 @@ figcaption {
   color: var(--foreground);
 }
 
-.block-button {
-  grid-column-gap: .8em;
-  grid-row-gap: .8em;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  margin-top: 1em;
-  display: flex;
-}
-
 .button-outline-small {
   box-shadow: 0 0 0 -10px var(--accent-a1), inset 0 0 0 2px var(--accent-a1);
   color: var(--accent-a1);
