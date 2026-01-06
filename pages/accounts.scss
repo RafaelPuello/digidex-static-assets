@@ -15,7 +15,7 @@
   max-width: 23em;
   margin-bottom: 1.8em;
 
-  @include respond-to(small) {
+  @include mixins.respond-to(small) {
     margin-bottom: 1em;
   }
 

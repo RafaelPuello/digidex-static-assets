@@ -14,18 +14,56 @@
 // of Bootstrap as needed.
 // @import "coderedcms/vendor/bootstrap/scss/bootstrap";
 
-// Wagtail CRX tweaks. You'll probably want to disable some of these and use
-// your own styles instead.
-// @import "coderedcms/scss/crx-article";
-// @import "coderedcms/scss/crx-bs-overrides";
-// @import "coderedcms/scss/crx-filmstrip";
-// @import "coderedcms/scss/crx-gallery";
-// @import "coderedcms/scss/crx-hero";
-// @import "coderedcms/scss/crx-location";
-// @import "coderedcms/scss/crx-navbar";
-// @import "coderedcms/scss/crx-pricelist";
-// @import "coderedcms/scss/crx-richtext";
-
 @import "normalize";
+
+// @import 'base/base';
+// @import 'base/typography';
+// @import 'base/page';
+// @import 'base/wrapper';
+// @import 'base/webflow';
 @import "globals";
+
 @import "pages/accounts";
+//@import 'pages/blog';
+//@import 'pages/solutions';
+//@import 'pages/contact';
+
+// Layout.
+// @import 'layout/top_bar';
+// @import 'layout/header';
+// @import 'layout/navigation';
+// @import 'layout/hero';
+// @import 'layout/banner';
+// @import 'layout/footer';
+@import "layout/table";
+
+// Component.
+// @import 'components/button';
+// @import 'components/form';
+// @import 'components/list';
+// @import 'components/links';
+// @import 'components/subtitles';
+// @import 'components/states';
+// @import 'components/utils';
+// @import 'components/info';
+// @import 'components/lottie';
+// @import 'components/embeds';
+// @import 'components/messages';
+// @import 'components/numbers';
+// @import 'components/reviews';
+// @import 'components/richtext';
+// @import 'components/clients';
+// @import 'components/tags';
+// @import 'components/faqs';
+// @import 'components/features';
+// @import 'components/map';
+
+// Shop Page
+// @import 'components/categories';
+// @import 'components/products';
+// @import 'components/ecommerce';
+
+// Company Page
+// @import 'components/about';
+// @import 'components/quote';
+// @import 'components/team';

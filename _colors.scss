@@ -1,0 +1,132 @@
+// Cyber Greyscale Palette
+$w-cyber-black:   #0A0A0A;  // Deep pixel-black shadows (Shadows only)
+$w-cyber-grey-800: #121212; // OLED black ( Backgrounds for panels in dark theme )
+$w-cyber-grey-700: #1F1F1F; // High-contrast dark surfaces ( Backgrounds for panels in dark theme )
+$w-cyber-grey-600: #2E2E2E; // Carbon-fiber texture ( Body copy, user content )
+$w-cyber-grey-500: #404040; // Metallic edges ( Panels, dividers in dark mode )
+$w-cyber-grey-400: #5A5A5A; // Cool steel tones ( Help text, placeholders, meta text, neutral state indicators  )
+$w-cyber-grey-200: #8C8C8C; // Neon glow reflections ( Dividers, button borders  )
+$w-cyber-grey-150: #B0B0B0; // Brushed aluminum panels ( Field borders  )
+$w-cyber-grey-100: #D0D0D0; // Soft neon backlight ( Dividers, panel borders  )
+$w-cyber-grey-50:  #E5E5E5; // Digital white noise ( Background for panels, row highlights  )
+$w-cyber-white:   #F0F0F0;  // Bright screen highlights (  Page backgrounds, Panels, Button text )
+
+// Information Colors (Inspired by glowing neon blues and data streams)
+$w-cyber-info-200: #1A9EFF;  // Intense neon blue for primary highlights and active states.
+$w-cyber-info-125: #4DA6FF;  // (Existing) Hover background - neon electric blue.
+$w-cyber-info-100: #3399FF;  // (Existing) Background/icons - digital blue.
+$w-cyber-info-75:  #66B3FF;  // Soft neon blue for borders, secondary text, and subtle accents.
+$w-cyber-info-50:  #99CCFF;  // (Existing) Background - soft neon glow.
+
+$w-cyber-positive-200: #33FF77;  // Intense neon green, vibrant for key highlights and primary actions.
+$w-cyber-positive-125: #4DFF8E;  // Bright green for hover states, glowing digital success.
+$w-cyber-positive-100: #66FF99;  // (Existing) Positive states - neon green success.
+$w-cyber-positive-75:  #80FFB2;  // Soft green glow for subtle UI elements and secondary text.
+$w-cyber-positive-50:  #B3FFCC;  // (Existing) Background - glowing circuit lines.
+
+$w-cyber-warning-200: #FF7500;  // Intense neon amber, bold and attention-grabbing.
+$w-cyber-warning-125: #FFA14D;  // Bright amber-orange for hover states or key highlights.
+$w-cyber-warning-100: #FFB84D;  // (Existing) Background/icons - amber warning glow.
+$w-cyber-warning-75:  #FFCC99;  // Soft amber glow for subtle accents and borders.
+$w-cyber-warning-50:  #FFE5B2;  // (Existing) Background - faint amber flicker.
+
+$w-cyber-critical-200: #FF1A1A;   // Intense neon red, ideal for critical actions.
+$w-cyber-critical-125: #FF5C5C;   // Bright red glow for hover states and alerts.
+$w-cyber-critical-100: #FF6666;   // (Existing) Neon red pulse for actions/states.
+$w-cyber-critical-75:  #FF8C8C;   // Soft red glow for subtle highlights.
+$w-cyber-critical-50:  #FFB3B3;   // (Existing) Subtle red warning background.
+
+// Nature Greyscale Palette
+$w-nature-black:   #1B1F1B;  // Deep forest shadows
+$w-nature-grey-800: #2F3B2F; // Dark tree bark and forest floor
+$w-nature-grey-700: #415241; // Moss-covered stones
+$w-nature-grey-600: #5A6C5A; // Wet leaves and foliage
+$w-nature-grey-500: #728572; // Soft mist and morning haze
+$w-nature-grey-400: #95A995; // Overcast sky in the woods
+$w-nature-grey-200: #BCC9BC; // Lichen-covered rocks
+$w-nature-grey-150: #D0DDD0; // Morning fog in the forest
+$w-nature-grey-100: #E3EDE3; // Dew on grass
+$w-nature-grey-50:  #F0F5F0; // Soft, diffused light through leaves
+$w-nature-white:   #F9FBF9;  // Sunlight filtering through trees
+
+$w-nature-red-200: #4B0A0A; // Deepest, earthy red reminiscent of volcanic rock or dark clay.
+$w-nature-red-125: #7F1515; // Darker red than base, evoking rich mineral hues.
+$w-nature-red-100: #B22222; // Base firebrick red (existing).
+$w-nature-red-75:  #D95C5C; // Softer, muted red with a warm undertone.
+$w-nature-red-50:  #F4C8C8; // Light, airy red hinting at gentle sunrise tones.
+
+$w-nature-blue-200: #0A1F3D; // Deepest marine blue, evoking midnight ocean depths.
+$w-nature-blue-125: #2C5A85; // Darker, cool-blue tone reminiscent of steep mountain lakes.
+$w-nature-blue-100: #4682B4; // Base steel blue (existing).
+$w-nature-blue-75:  #6C9EC8; // Calmer, lighter blue echoing a bright sky before dusk.
+$w-nature-blue-50:  #A6C9E1; // Soft, misty blue capturing morning dew or a light sky wash.
+
+$w-nature-green-200: #0A2E0A; // Deep forest green, almost black—like ancient evergreens.
+$w-nature-green-125: #335F17; // Dark, lush green bridging the base and the forest depths.
+$w-nature-green-100: #6B8E23; // Base olive drab (existing).
+$w-nature-green-75:  #8EAD55; // Softer, leafier green hinting at sunlit canopies.
+$w-nature-green-50:  #C1E29F; // Light, airy green like spring buds or fresh meadow grass.
+
+$w-nature-amber-200: #3D1F0A; // Deepest amber, reminiscent of dark, resinous tree sap.
+$w-nature-amber-125: #8B4D16; // A richer, darker golden-brown—like polished amber stone.
+$w-nature-amber-100: #D2691E; // Base chocolate/amber with warm, earthy hues.
+$w-nature-amber-75:  #EC9A52; // Lighter, sunny amber capturing a glowing afternoon light.
+$w-nature-amber-50:  #F5D0B0; // Softest golden wash, like a gentle sunset glow.
+
+$white: white;
+$primary:       #00693e;
+$secondary:     #00872612;
+$background: #f4fdf8;
+$border: rgba(0, 105, 62, 0.2);
+$heading: #083629;
+$paragraph: rgba(8, 54, 41, 0.8);
+
+$primary-a1: $primary;
+$secondary-b1: $secondary;
+$shadow-c1: #00693e0d;
+$commerce-d1: #38b47c;
+$blockquote-e1: #00693e33;
+$figcaption-f1: #e4f2e7;
+$muted-g1: #0F2117;
+$translucent-h1: #0F211799; 
+
+$primary-a2: #bc0087;
+$secondary-b2: #bc008712;
+
+$primary-a3: #3959ff;
+$secondary-b3: #3959ff12;
+
+$primary-a4: #eadb5b;
+
+/* Primary Color - Deep Teal */
+$w-color-primary: #006D5B; /* hsl(168, 100%, 21%) */
+$w-color-primary-200: #005247; /* Darker shade for accents */
+
+/* Secondary Color - Soft Green */
+$w-color-secondary: #2C906F;
+$w-color-secondary-600: hsl(160, 53%, 32%); /* Hover states */
+$w-color-secondary-400: hsl(160, 53%, 42%); /* Active states */
+$w-color-secondary-100: hsl(160, 53%, 82%); /* UI highlights over dark backgrounds */
+$w-color-secondary-75: hsl(160, 53%, 87%);  /* UI highlights over dark text */
+$w-color-secondary-50: hsl(160, 53%, 92%);  /* Backgrounds */
+
+/* Additional Secondary Colors */
+$w-color-secondary-blue: #357ABD; /* hsl(213, 56%, 47%) */
+$w-color-secondary-red: #D1495B; /* hsl(353, 61%, 56%) */
+
+/* Positive Messages - Vibrant Green */
+$w-color-positive-100: #28A745; /* hsl(134, 61%, 41%) */
+$w-color-positive-50: #C3E6CB;  /* Background for positive states */
+
+/* Information Messages - Calm Blue */
+$w-color-info-100: #17A2B8; /* hsl(188, 71%, 41%) */
+$w-color-info-50: #D1ECF1; /* Background for information messages */
+
+/* Warning Messages - Soft Amber */
+$w-color-warning-100: #FFC107; /* hsl(45, 100%, 50%) */
+$w-color-warning-50: #FFF3CD;  /* Background for warnings */
+
+/* Critical Messages - Strong Red */
+$w-color-critical-200: #DC3545; /* hsl(354, 70%, 47%) */
+$w-color-critical-100: #F8D7DA; /* Background for critical states */
+$w-color-critical-50: #FDECEA;  /* Background only */
