@@ -3112,7 +3112,7 @@ figcaption {
 }
 
 .text-field::placeholder {
-  color: #14171899;
+  color: var(--accent-h1);
 }
 
 .text-field.transparent {
@@ -3150,7 +3150,7 @@ figcaption {
 }
 
 .textarea::placeholder {
-  color: #14171899;
+  color: var(--accent-h1);
 }
 
 .brand-center {
@@ -3203,7 +3203,7 @@ figcaption {
 }
 
 .text-account {
-  color: #14171899;
+  color: var(--accent-h1);
   text-align: center;
   width: 100%;
   max-width: 32em;
@@ -3219,7 +3219,7 @@ figcaption {
 }
 
 .link-account {
-  color: #14171899;
+  color: var(--accent-h1);
   transition: color .3s cubic-bezier(.25, .46, .45, .94);
 }
 
@@ -3937,7 +3937,7 @@ figcaption {
 }
 
 .text-field-ecommerce::placeholder {
-  color: #14171899;
+  color: var(--accent-h1);
 }
 
 .country {
