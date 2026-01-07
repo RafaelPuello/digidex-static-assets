@@ -1,0 +1,78 @@
+@use "@/styles/variables";
+@use "@/styles/mixins";
+@use "@/styles/themes";
+
+.button {
+  cursor: pointer;
+  text-decoration: none;
+  background-color: var(--accent-a1);
+  color: var(--white);
+  letter-spacing: -.02em;
+  border: 0;
+  border-radius: 50em;
+  padding: .9em 1.8em;
+  @extend %button-shared;
+  transition: box-shadow .3s cubic-bezier(.25, .46, .45, .94), background-color .3s cubic-bezier(.25, .46, .45, .94);
+
+  &:hover {
+    box-shadow: 0 15px 40px -10px var(--accent-a1);
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 105, 62, 0.4);
+  }
+  
+  &.small {
+    background-color: var(--accent-a1)  ;
+    color: var(--white);
+    letter-spacing: -.02em;
+    border-radius: 50em;
+    padding: .7em 1.4em;
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 120%;
+    transition: box-shadow .3s cubic-bezier(.25, .46, .45, .94), background-color .3s cubic-bezier(.25, .46, .45, .94);
+  
+    &:hover {
+      box-shadow: 0 15px 40px -10px var(--accent-a1);
+    }
+  }
+}
+
+input.button {
+  -webkit-appearance: button;
+}
+
+.button-outline {
+  box-shadow: 0 0 0 -10px var(--accent-a1), inset 0 0 0 2px var(--accent-a1);
+  color: var(--accent-a1);
+  letter-spacing: -.02em;
+  background-color: #0000;
+  border-radius: 50em;
+  padding: .9em 1.8em;
+  @extend %button-shared;
+  transition: box-shadow .3s cubic-bezier(.25, .46, .45, .94), color .3s cubic-bezier(.25, .46, .45, .94), background-color .3s cubic-bezier(.25, .46, .45, .94);
+
+  &:hover {
+    background-color: var(--accent-a1);
+    box-shadow: 0 15px 40px -10px var(--accent-a1), inset 0 0 0 2px var(--accent-a1);
+    color: var(--foreground);
+  }
+}
+
+.block-button {
+  grid-column-gap: .8em;
+  grid-row-gap: .8em;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 1em;
+  display: flex;
+
+  @include mixins.respond-to(small) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
