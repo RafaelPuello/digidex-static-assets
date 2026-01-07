@@ -86,7 +86,7 @@ $w-color-critical-50: #FDECEA;  /* Background only */
   --white: white;
 
   --background: #{$background};
-  --foreground: #{$white};
+  --foreground: var(--white);
 
   --border: #{$border};
   --heading: #{$heading};

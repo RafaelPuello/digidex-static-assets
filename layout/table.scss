@@ -1,45 +1,128 @@
+/* ----------------------------------
+   Tables
+---------------------------------- */
+
 .table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.95rem;
-  background-color: var(--surface, #fff);
+  font-size: $font-size-normal;
+  background-color: var(--foreground);
+  color: var(--paragraph);
+
+  /* Prevent layout jump with long content */
+  table-layout: auto;
 }
 
+/* ----------------------------------
+   Head
+---------------------------------- */
+
 .table thead th {
-  text-align: left;
-  font-weight: 600;
+  text-align: center;
+  font-weight: $font-weight-semibold;
+  font-size: $font-size-small;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+
   padding: 0.75rem 0.75rem;
-  color: var(--text-muted, #666);
-  border-bottom: 1px solid var(--border-subtle, #e5e7eb);
   white-space: nowrap;
+
+  color: var(--accent-g1);
+  background-color: var(--accent-f1);
+
+  border-bottom: 1px solid var(--border);
 }
+
+/* ----------------------------------
+   Body
+---------------------------------- */
 
 .table tbody td {
   padding: 0.75rem;
   vertical-align: middle;
-  border-bottom: 1px solid var(--border-subtle, #f0f0f0);
+  border-bottom: 1px solid var(--border);
 }
 
+/* Remove final divider */
 .table tbody tr:last-child td {
   border-bottom: none;
 }
 
+/* ----------------------------------
+   Row states
+---------------------------------- */
+
+.table tbody tr {
+  transition: background-color 0.15s ease;
+}
+
+.table-hover tbody tr:hover {
+  background-color: var(--accent-b1);
+}
+
+/* Optional selected state */
+.table-selected tbody tr.is-selected {
+  background-color: var(--accent-b3);
+}
+
+/* ----------------------------------
+   Alignment helpers
+---------------------------------- */
+
+.table td.is-numeric,
+.table th.is-numeric {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.table td.is-center,
+.table th.is-center {
+  text-align: center;
+}
+
+/* ----------------------------------
+   Bordered variant
+---------------------------------- */
+
 .table-bordered {
-  border: 1px solid var(--border, #e5e7eb);
-  border-radius: 0.5rem;
-  overflow: hidden; /* clips radius */
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  overflow: hidden;
 }
 
 .table-bordered thead th {
-  background-color: var(--surface-muted, #fafafa);
+  background-color: var(--accent-f1);
 }
 
 .table-bordered td,
 .table-bordered th {
-  border-right: 1px solid var(--border-subtle, #e5e7eb);
+  border-right: 1px solid var(--border);
 }
 
 .table-bordered td:last-child,
 .table-bordered th:last-child {
   border-right: none;
+}
+
+/* ----------------------------------
+   Dense variant
+---------------------------------- */
+
+.table-sm {
+  font-size: $font-size-small;
+
+  thead th,
+  tbody td {
+    padding: 0.5rem 0.6rem;
+  }
+}
+
+/* ----------------------------------
+   Actions column
+---------------------------------- */
+
+.table .col-actions {
+  width: 1%;
+  white-space: nowrap;
+  text-align: right;
 }
