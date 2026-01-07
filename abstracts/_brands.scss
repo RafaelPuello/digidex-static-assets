@@ -1,0 +1,54 @@
+$brands: (
+  blue: (
+    background: #f4f6f7,
+    foreground: white,
+
+    border: #0f649233,
+    heading: #141718,
+    paragraph: #141718cc,
+
+    accent-a1: #3959ff,
+    accent-b1: #3959ff12,
+    accent-c1: #1417180d,
+    accent-d1: #38b47c,
+    accent-e1: #3959ff33,
+    accent-f1: #e4ebee,
+    accent-g1: #14171826,
+    accent-h1: #14171899,
+
+    accent-a2: #bc0087,
+    accent-b2: #bc008712,
+
+    accent-a3: #008726,
+    accent-b3: #00872612,
+    accent-h3: #0F211799,
+
+    accent-a4: #eadb5b
+  ),
+  green: (
+    background: #f4fdf8,
+    foreground: white,
+
+    border: rgba(0, 105, 62, 0.2),
+    heading: #083629,
+    paragraph: rgba(8, 54, 41, 0.8),
+
+    accent-a1: #00693e,
+    accent-b1: rgba(0, 105, 62, 0.07),
+    accent-c1: #00693e0d,
+    accent-d1: #38b47c,
+    accent-e1: #00693e33,
+    accent-f1: #e4f2e7,
+    accent-g1: #0F2117,
+    accent-h1: #0F211799,
+
+    accent-a2: #bc0087,
+    accent-b2: #bc008712,
+
+    accent-a3: #3959ff,
+    accent-b3: #3959ff12,
+    accent-h3: #14171899,
+
+    accent-a4: #eadb5b
+  )
+);
