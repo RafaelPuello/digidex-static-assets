@@ -1,5 +1,5 @@
-@import '../libs/variables';
-@import '../libs/mixins';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
 
 footer {
   justify-content: center;

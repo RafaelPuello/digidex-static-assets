@@ -1,6 +1,6 @@
-@use "@/styles/variables";
-@use "@/styles/mixins";
-@use "@/styles/themes";
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+@use "../abstracts/themes";
 
 .button {
   cursor: pointer;
