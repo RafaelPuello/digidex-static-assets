@@ -6,22 +6,22 @@
 ///
 
 // Use custom variables.
-@import "variables";
-@import "themes";
-@import "mixins";
+@import "abstracts/variables";
+@import "abstracts/themes";
+@import "abstracts/mixins";
 
 // Import Bootstrap. Alternatively, change this to import individual components
 // of Bootstrap as needed.
 // @import "coderedcms/vendor/bootstrap/scss/bootstrap";
 
-@import "normalize";
+@import "abstracts/normalize";
 
 // @import 'base/base';
 // @import 'base/typography';
 // @import 'base/page';
 // @import 'base/wrapper';
 // @import 'base/webflow';
-@import "globals";
+@import "base/globals";
 
 @import "pages/accounts";
 //@import 'pages/blog';

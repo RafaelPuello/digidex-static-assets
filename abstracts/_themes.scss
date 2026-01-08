@@ -7,6 +7,7 @@
 ----------------------------------- */
 
 $themes: (
+/* -----------------------------------
   light: (
     bg: $white,
     surface: $gray-50,
@@ -24,6 +25,7 @@ $themes: (
     primary: $blue-500,
     shadow: 0 8px 24px rgba($black, 0.5),
   ),
+----------------------------------- */
   blue: (
     background: #f4f6f7,
     foreground: white,
@@ -77,29 +79,3 @@ $themes: (
     accent-a4: #eadb5b
   )
 );
-
-/* -----------------------------------
-   Theme variable generator
-
-
-@mixin theme-vars($theme-name) {
-  $theme: map-get($themes, $theme-name);
-
-  @each $key, $value in $theme {
-    --#{$key}: #{$value};
-  }
-}
------------------------------------ */
-
-/* -----------------------------------
-   Theme bindings
-
-
-:root {
-  @include theme-vars(light);
-}
-
-[data-theme="dark"] {
-  @include theme-vars(dark);
-}
------------------------------------ */
