@@ -6,27 +6,29 @@
 ///
 
 // Use custom variables.
-@import "abstracts/variables";
-@import "abstracts/themes";
-@import "abstracts/mixins";
+// @import "abstracts/variables";
+// @import "abstracts/themes";
+// @import "abstracts/mixins";
+// @import "abstracts/normalize";
+@use "abstracts" as *;
 
 // Import Bootstrap. Alternatively, change this to import individual components
 // of Bootstrap as needed.
 // @import "coderedcms/vendor/bootstrap/scss/bootstrap";
-
-@import "abstracts/normalize";
 
 // @import 'base/base';
 // @import 'base/typography';
 // @import 'base/page';
 // @import 'base/wrapper';
 // @import 'base/webflow';
-@import "base/globals";
+// @import "base/globals";
+@use "base";
 
-@import "pages/accounts";
+//@import "pages/accounts";
 //@import 'pages/blog';
 //@import 'pages/solutions';
 //@import 'pages/contact';
+@use "pages";
 
 // Layout.
 // @import 'layout/top_bar';
@@ -35,7 +37,8 @@
 // @import 'layout/hero';
 // @import 'layout/banner';
 // @import 'layout/footer';
-@import "layout/table";
+// @use "layout/table";
+@use "layout";
 
 // Component.
 // @import 'components/button';
