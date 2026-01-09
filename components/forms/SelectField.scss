@@ -1,0 +1,39 @@
+@use "@/styles/abstracts/variables";
+@use "@/styles/abstracts/mixins";
+@use "@/styles/abstracts/themes";
+
+.w-select {
+  display: block;
+  width: 100%;
+  height: 38px;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333333;
+  vertical-align: middle;
+  background-color: #f3f3f3;
+  border: 1px solid #cccccc;
+
+  &:focus {
+    border-color: #3898EC;
+    outline: 0;
+  }
+
+  &::placeholder {
+    color: #999;
+  }
+}
+.w-select[disabled],
+.w-select[readonly],
+.w-select {
+  cursor: not-allowed;
+}
+.w-select[multiple] {
+  height: auto;
+}
+.w-select[disabled]:not(.w-input-disabled),
+.w-select[readonly],
+.w-select {
+  background-color: #eeeeee;
+}

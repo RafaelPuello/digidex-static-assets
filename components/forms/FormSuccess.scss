@@ -1,0 +1,33 @@
+@use "@/styles/abstracts/variables";
+@use "@/styles/abstracts/mixins";
+@use "@/styles/abstracts/themes";
+
+.form-done {
+  display: none;
+  padding: 20px;
+  text-align: center;
+  background-color: #dddddd;
+}
+
+.success-message {
+  background-color: var(--accent-b3);
+  border-radius: .87em;
+  padding: 1.5em 10%;
+}
+.success-message.yellow {
+  border: 1px dashed var(--accent-a4);
+  background-color: #0000;
+}
+
+.text-success {
+  color: var(--accent-a3);
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  font-family: IBM Plex Mono, sans-serif;
+  font-size: .7em;
+  font-weight: 500;
+  line-height: 130%;
+}
+.text-success.yellow {
+  color: var(--accent-a4);
+}

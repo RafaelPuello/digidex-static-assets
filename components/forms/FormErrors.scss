@@ -1,0 +1,34 @@
+@use "@/styles/abstracts/variables";
+@use "@/styles/abstracts/mixins";
+@use "@/styles/abstracts/themes";
+
+.form-fail {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #ffdede;
+}
+
+.error-message {
+  background-color: #bc000312;
+  border-radius: .87em;
+  margin-top: 1em;
+  padding: 1em 10%;
+}
+.error-message.yellow {
+  border: 1px dashed var(--accent-a4);
+  background-color: #0000;
+}
+
+.text-error {
+  color: #bc0003;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+  font-size: .7em;
+  font-weight: 500;
+  line-height: 130%;
+}
+.text-error.yellow {
+  color: var(--accent-a4);
+}

@@ -1,0 +1,91 @@
+@use "@/styles/variables";
+@use "@/styles/mixins";
+@use "@/styles/themes";
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.form-block {
+  width: 100%;
+  margin-top: .4em;
+  margin-bottom: 0.8em;
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  display: flex;
+}
+
+.form .helptext {
+  font-style: italic;
+}
+
+.form-row {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.form-row-inline {
+  align-items: flex-start;
+
+  @include mixins.respond-to(small) {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .field-group {
+    flex: 1.3;
+    min-width: 0;
+  }
+  
+  .text-field {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .button {
+    flex: 0 0 auto;  // Prevent button from stretching
+    white-space: nowrap;
+  }
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.field-group {
+  position: relative;
+}
+
+.submit-button {
+  background-color: var(--accent-a1);
+  color: var(--white);
+  letter-spacing: -.02em;
+  border-radius: .87em;
+  padding: 1.2em 1.8em;
+  font-size: 1.12em;
+  font-weight: 500;
+  line-height: 120%;
+  transition: box-shadow .3s cubic-bezier(.25, .46, .45, .94), background-color .3s cubic-bezier(.25, .46, .45, .94);
+
+  &:hover {
+    box-shadow: 0 15px 40px -10px var(--accent-a1);
+  }
+
+  &.yellow {
+    background-color: var(--accent-a4);
+    color: var(--heading);
+
+    &:hover {
+      box-shadow: 0 15px 40px -10px var(--accent-a4);
+    }
+  }
+}

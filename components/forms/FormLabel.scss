@@ -1,0 +1,15 @@
+@use "@/styles/abstracts/variables";
+@use "@/styles/abstracts/mixins";
+@use "@/styles/abstracts/themes";
+
+.form-label {
+  cursor: pointer;
+  position: absolute;
+  display: inline-block;
+  font-weight: normal;
+  margin-bottom: 0px;
+  left: 0.5rem;
+  top: 1rem;
+  color: #aaa;
+  transition: 0.2s ease-out;
+}

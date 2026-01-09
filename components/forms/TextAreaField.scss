@@ -1,0 +1,33 @@
+@use "@/styles/abstracts/variables";
+@use "@/styles/abstracts/mixins";
+@use "@/styles/abstracts/themes";
+
+.textarea {
+  display: block;
+  border: 1px solid var(--border);
+  background-color: var(--foreground);
+  color: var(--heading);
+  border-radius: .87em;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 14em;
+  max-height: 30em;
+  margin-bottom: 1.12em;
+  padding: 1em 1.2em;
+  font-size: 1em;
+  line-height: 130%;
+  transition: border-color .3s cubic-bezier(.25, .46, .45, .94);
+
+  &:focus {
+    border-color: var(--accent-a1);
+  }
+
+  &::placeholder {
+    color: var(--accent-h1);
+  }
+
+  &.text-field,
+  &.w-select {
+    height: auto;
+  }
+}
