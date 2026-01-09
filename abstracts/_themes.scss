@@ -67,7 +67,7 @@ $themes: (
     accent-a1: #3959ff,
     accent-b1: #3959ff12,
     accent-c1: #1417180d,
-    accent-d1: #38b47c,
+    accent-d1: #3878b4,
     accent-e1: #3959ff33,
     accent-f1: #e4ebee,
     accent-g1: #14171826,
@@ -83,5 +83,5 @@ $themes: (
   )
 );
 
-$active-theme-name: g;
+$active-theme-name: b;
 $active-theme: map-get($themes, $active-theme-name);

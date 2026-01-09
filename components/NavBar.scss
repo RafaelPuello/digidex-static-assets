@@ -429,7 +429,7 @@
             }
 
             .cs-toggle {
-                background-color: var(--secondary);
+                background-color: var(--accent-b1);
             }
 
             .cs-phone {
@@ -864,10 +864,10 @@
 
             .cs-li-link {
                 &.cs-active {
-                    color: var(--secondary);
+                    color: var(--accent-b1);
                 }
                 &:hover {
-                    color: var(--secondary);
+                    color: var(--accent-b1);
                 }
             }
         }
