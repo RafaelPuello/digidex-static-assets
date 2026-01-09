@@ -219,7 +219,7 @@
             line-height: 1.5em;
             text-decoration: none;
             margin: 0;
-            color: var(--headerColor);
+            color: var(--heading);
             display: flex;
             justify-content: flex-start;
             align-items: center;
@@ -375,7 +375,7 @@
             line-height: 1.2em;
             text-decoration: none;
             margin: 0;
-            color: var(--headerColor);
+            color: var(--heading);
             display: inline-block;
             position: relative;
             cursor: pointer;
@@ -632,7 +632,7 @@
                 /* prevents padding from affecting height and width */
                 box-sizing: border-box;
                 padding: calc(12 / 16 * 1rem);
-                color: var(--headerColor);
+                color: var(--heading);
                 display: block;
                 transition: color 0.3s, background-color 0.3s;
 
@@ -777,7 +777,7 @@
             line-height: 1.5em;
             text-decoration: none;
             margin: 0;
-            color: var(--headerColor);
+            color: var(--heading);
             display: block;
             position: relative;
             transition: color 0.3s;
