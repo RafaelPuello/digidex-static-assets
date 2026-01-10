@@ -1,5 +1,5 @@
-@import '../libs/variables';
-@import '../libs/mixins';
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
 
 .list {
   grid-column-gap: .7em;
