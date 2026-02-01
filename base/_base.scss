@@ -26,19 +26,19 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --white: #{$white};
-    --primary: #{$primary};
-    --secondary: #{$secondary};
-    --background: #{$background};
-    --border: #{$border};
-    --heading: #{$heading};
-    --paragraph: #{$paragraph};
-    // --white: #{$dark-white};          
-    // --primary: #{$dark-primary};    
-    // --secondary: #{$dark-secondary};
-    // --background: #{$dark-background};
-    // --border: #{$dark-border};
-    // --heading: #{$dark-heading};
+    // --white: #{$white};
+    // --primary: #{$primary};
+    // --secondary: #{$secondary};
+    // --background: #{$background};
+    // --border: #{$border};
+    // --heading: #{$heading};
     // --paragraph: #{$paragraph};
+    --white: #{$dark-white};          
+    --primary: #{$dark-primary};    
+    --secondary: #{$dark-secondary};
+    --background: #{$dark-background};
+    --border: #{$dark-border};
+    --heading: #{$dark-heading};
+    --paragraph: #{$paragraph};
   }
 }
