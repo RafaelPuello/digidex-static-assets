@@ -4,7 +4,7 @@
 :root {
   --white: white;
 
-  @include themes.css-vars-from-map(themes.$active-theme);
+  @include themes.css-vars-from-map(themes.$light-theme);
 
   --font-sans: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, sans-serif;
@@ -12,16 +12,11 @@
     Menlo, Monaco, Consolas, monospace;
 }
 
-/*@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
-    --background: #0f1f18;
-    --foreground: #49514d;
-    
-    --border: rgba(165, 255, 205, 0.15);
-    --heading: #d4f8e5;
-    --paragraph: rgba(212, 248, 229, 0.85);
+    @include themes.css-vars-from-map(themes.$dark-theme);    
   }
-}*/
+}
 
 /// Body
 ///

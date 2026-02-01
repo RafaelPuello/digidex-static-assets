@@ -10,76 +10,179 @@
 }
 
 $themes: (
-/* -----------------------------------
-  light: (
-    bg: $white,
-    surface: $gray-50,
-    text: $gray-900,
-    border: rgba($black, 0.08),
-    primary: $blue-600,
-    shadow: 0 8px 24px rgba($black, 0.08),
-  ),
-
-  dark: (
-    bg: $black,
-    surface: #111827,
-    text: $gray-50,
-    border: rgba($white, 0.08),
-    primary: $blue-500,
-    shadow: 0 8px 24px rgba($black, 0.5),
-  ),
------------------------------------ */
+  /* -----------------------------------
+     Light themes
+  ----------------------------------- */
   g: (
-    background: #f4fdf8,
-    foreground: white,
+    background: $nature-grey-50,
+    foreground: $nature-white,
 
-    border: rgba(0, 105, 62, 0.2),
-    heading: #083629,
-    paragraph: rgba(8, 54, 41, 0.8),
+    border: rgba($nature-green-150, 0.2),
+    heading: $nature-green-200,
+    paragraph: rgba($nature-green-200, 0.8),
 
-    accent-a1: #00693e,
-    accent-b1: rgba(0, 105, 62, 0.07),
-    accent-c1: #00693e0d,
-    accent-d1: #38b47c,
-    accent-e1: #00693e33,
-    accent-f1: #e4f2e7,
-    accent-g1: #0F2117,
-    accent-h1: #0F211799,
+    accent-a1: $nature-green-150,
+    accent-b1: rgba($nature-green-150, 0.07),
+    accent-c1: rgba($nature-green-150, 0.05),
+    accent-d1: $nature-green-100,
+    accent-e1: rgba($nature-green-150, 0.2),
+    accent-f1: $nature-green-50,
+    accent-g1: $nature-black,
+    accent-h1: rgba($nature-black, 0.6),
 
-    accent-a2: #bc0087,
-    accent-b2: #bc008712,
+    accent-a2: $cyber-magenta-200,
+    accent-b2: rgba($cyber-magenta-200, 0.07),
 
-    accent-a3: #3959ff,
-    accent-b3: #3959ff12,
+    accent-a3: $cyber-blue-200,
+    accent-b3: rgba($cyber-blue-200, 0.07),
 
-    accent-a4: #eadb5b
+    accent-a4: $nature-amber-75
   ),
   b: (
-    background: #f4f6f7,
-    foreground: white,
+    background: $cyber-grey-50,
+    foreground: $cyber-white,
 
-    border: #0f649233,
-    heading: #141718,
-    paragraph: #141718cc,
+    border: rgba($cyber-blue-200, 0.2),
+    heading: $cyber-grey-800,
+    paragraph: rgba($cyber-grey-800, 0.8),
 
-    accent-a1: #3959ff,
-    accent-b1: #3959ff12,
-    accent-c1: #1417180d,
-    accent-d1: #3878b4,
-    accent-e1: #3959ff33,
-    accent-f1: #e4ebee,
-    accent-g1: #14171826,
-    accent-h1: #14171899,
+    accent-a1: $cyber-blue-200,
+    accent-b1: rgba($cyber-blue-200, 0.07),
+    accent-c1: rgba($cyber-grey-800, 0.05),
+    accent-d1: $cyber-blue-100,
+    accent-e1: rgba($cyber-blue-200, 0.2),
+    accent-f1: $cyber-blue-50,
+    accent-g1: rgba($cyber-grey-800, 0.15),
+    accent-h1: rgba($cyber-grey-800, 0.6),
 
-    accent-a2: #bc0087,
-    accent-b2: #bc008712,
+    accent-a2: $cyber-magenta-200,
+    accent-b2: rgba($cyber-magenta-200, 0.07),
 
-    accent-a3: #008726,
-    accent-b3: #00872612,
+    accent-a3: $cyber-green-200,
+    accent-b3: rgba($cyber-green-200, 0.07),
 
-    accent-a4: #eadb5b
+    accent-a4: $cyber-amber-100
+  ),
+  r: (
+    background: $nature-red-50,
+    foreground: $nature-white,
+
+    border: rgba($nature-red-150, 0.2),
+    heading: $nature-red-200,
+    paragraph: rgba($nature-red-200, 0.8),
+
+    accent-a1: $nature-red-150,
+    accent-b1: rgba($nature-red-150, 0.07),
+    accent-c1: rgba($nature-red-150, 0.05),
+    accent-d1: $nature-red-100,
+    accent-e1: rgba($nature-red-150, 0.2),
+    accent-f1: $nature-red-50,
+    accent-g1: $nature-red-200,
+    accent-h1: rgba($nature-red-200, 0.6),
+
+    accent-a2: $nature-amber-150,
+    accent-b2: rgba($nature-amber-150, 0.07),
+
+    accent-a3: $cyber-blue-200,
+    accent-b3: rgba($cyber-blue-200, 0.07),
+
+    accent-a4: $nature-amber-75
+  ),
+
+  /* -----------------------------------
+     Dark themes
+
+     Variables that change for dark mode:
+     - background: dark base color
+     - foreground: elevated surface (cards, modals)
+     - border: lighter/more visible on dark
+     - heading: light text for readability
+     - paragraph: light text with reduced opacity
+     - accent-a1: brighter for contrast on dark
+     - accent-b1, c1, e1: adjusted opacity for dark bg
+     - accent-f1: muted dark surface
+     - accent-g1, h1: inverted to light
+     - accent-a2, a3: slightly brighter variants
+  ----------------------------------- */
+  g-dark: (
+    background: $nature-black,
+    foreground: $nature-grey-900,
+
+    border: rgba($nature-green-75, 0.2),
+    heading: $nature-white,
+    paragraph: rgba($nature-grey-50, 0.8),
+
+    accent-a1: $nature-green-100,
+    accent-b1: rgba($nature-green-75, 0.12),
+    accent-c1: rgba($nature-green-75, 0.08),
+    accent-d1: $nature-green-75,
+    accent-e1: rgba($nature-green-75, 0.25),
+    accent-f1: $nature-grey-800,
+    accent-g1: $nature-white,
+    accent-h1: rgba($nature-grey-50, 0.6),
+
+    accent-a2: $cyber-magenta-150,
+    accent-b2: rgba($cyber-magenta-100, 0.15),
+
+    accent-a3: $cyber-blue-75,
+    accent-b3: rgba($cyber-blue-100, 0.15),
+
+    accent-a4: $nature-amber-75
+  ),
+  b-dark: (
+    background: $cyber-grey-900,
+    foreground: $cyber-grey-800,
+
+    border: rgba($cyber-blue-75, 0.2),
+    heading: $cyber-white,
+    paragraph: rgba($cyber-grey-50, 0.8),
+
+    accent-a1: $cyber-blue-75,
+    accent-b1: rgba($cyber-blue-75, 0.12),
+    accent-c1: rgba($cyber-grey-50, 0.08),
+    accent-d1: $cyber-blue-50,
+    accent-e1: rgba($cyber-blue-75, 0.25),
+    accent-f1: $cyber-grey-700,
+    accent-g1: rgba($cyber-grey-50, 0.15),
+    accent-h1: rgba($cyber-grey-50, 0.6),
+
+    accent-a2: $cyber-magenta-150,
+    accent-b2: rgba($cyber-magenta-100, 0.15),
+
+    accent-a3: $cyber-green-100,
+    accent-b3: rgba($cyber-green-100, 0.15),
+
+    accent-a4: $cyber-amber-75
+  ),
+  r-dark: (
+    background: $nature-red-200,
+    foreground: $nature-red-150,
+
+    border: rgba($nature-red-75, 0.2),
+    heading: $nature-red-50,
+    paragraph: rgba($nature-red-50, 0.8),
+
+    accent-a1: $nature-red-75,
+    accent-b1: rgba($nature-red-75, 0.12),
+    accent-c1: rgba($nature-red-75, 0.08),
+    accent-d1: $nature-red-50,
+    accent-e1: rgba($nature-red-75, 0.25),
+    accent-f1: $nature-red-150,
+    accent-g1: $nature-red-50,
+    accent-h1: rgba($nature-red-50, 0.6),
+
+    accent-a2: $nature-amber-75,
+    accent-b2: rgba($nature-amber-100, 0.15),
+
+    accent-a3: $cyber-blue-75,
+    accent-b3: rgba($cyber-blue-100, 0.15),
+
+    accent-a4: $nature-amber-50
   )
 );
 
-$active-theme-name: g;
-$active-theme: map-get($themes, $active-theme-name);
+$light-theme-name: g;
+$light-theme: map-get($themes, $light-theme-name);
+
+$dark-theme-name: g-dark;
+$dark-theme: map-get($themes, $dark-theme-name);
