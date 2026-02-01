@@ -433,7 +433,7 @@
             }
 
             .cs-phone {
-                color: var(--bodyTextColorWhite);
+                color: var(--foreground);
             }
 
             .cs-phone-icon {
@@ -450,7 +450,7 @@
             }
 
             .cs-li-link {
-                color: var(--bodyTextColorWhite);
+                color: var(--foreground);
             }
         }
     }
@@ -464,7 +464,7 @@
 @media only screen and (max-width: 63.9375rem) {
     #cs-navigation {
         .cs-dropdown {
-            color: var(--bodyTextColorWhite);
+            color: var(--foreground);
             position: relative;
             &.cs-active {
                 .cs-drop-ul {
@@ -637,7 +637,7 @@
                 transition: color 0.3s, background-color 0.3s;
 
                 &:hover {
-                    color: var(--bodyTextColorWhite);
+                    color: var(--foreground);
                     background-color: var(--accent-a1);
                 }
 
@@ -659,7 +659,7 @@
 
             .cs-li-link.cs-drop-link {
                 &:hover {
-                    color: var(--bodyTextColorWhite);
+                    color: var(--foreground);
                 }
             }
         }
@@ -855,7 +855,7 @@
 
             .cs-li-link,
             .cs-phone {
-                color: var(--bodyTextColorWhite);
+                color: var(--foreground);
             }
 
             .cs-phone-icon {
