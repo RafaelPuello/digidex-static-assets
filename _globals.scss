@@ -1,6 +1,6 @@
-@use "../abstracts/variables";
-@use "../abstracts/mixins";
-@use "../abstracts/themes";
+@use "abstracts/variables";
+@use "abstracts/mixins";
+@use "abstracts/themes";
 
 html {
   min-height: 100dvh;
@@ -37,11 +37,13 @@ a {
   text-decoration: underline;
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
   color: var(--heading);
+  margin: 0;
+}
+
+h1 {
   letter-spacing: -.05em;
-  margin-top: 0;
-  margin-bottom: 0;
   font-size: 4.12em;
   font-weight: 700;
   line-height: 110%;
@@ -60,10 +62,7 @@ h1 {
 }
 
 h2 {
-  color: var(--heading);
   letter-spacing: -.05em;
-  margin-top: 0;
-  margin-bottom: 0;
   font-size: 3.12em;
   font-weight: 700;
   line-height: 115%;
@@ -82,10 +81,7 @@ h2 {
 }
 
 h3 {
-  color: var(--heading);
   letter-spacing: -.05em;
-  margin-top: 0;
-  margin-bottom: 0;
   font-size: 2.37em;
   font-weight: 700;
   line-height: 120%;
@@ -104,10 +100,7 @@ h3 {
 }
 
 h4 {
-  color: var(--heading);
   letter-spacing: -.05em;
-  margin-top: 0;
-  margin-bottom: 0;
   font-size: 1.75em;
   font-weight: 700;
   line-height: 125%;
@@ -126,10 +119,7 @@ h4 {
 }
 
 h5 {
-  color: var(--heading);
   letter-spacing: -.05em;
-  margin-top: 0;
-  margin-bottom: 0;
   font-size: 1.37em;
   font-weight: 700;
   line-height: 128%;
@@ -148,13 +138,58 @@ h5 {
 }
 
 h6 {
-  color: var(--heading);
   letter-spacing: -.02em;
-  margin-top: 0;
-  margin-bottom: 0;
   font-size: 1em;
   font-weight: 600;
   line-height: 140%;
+}
+
+// Lists
+ul, ol {
+  margin: 1.5em 0;
+  padding-left: 2.2em;
+}
+
+li {
+  padding: 0.3em 0.5em;
+}
+
+strong {
+  color: var(--heading);
+  // font-weight: $font-weight-bold;
+}
+
+em {
+  font-style: italic;
+}
+
+blockquote {
+  color: var(--primary-a1);
+  border-left: 2px solid #39ff3933;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  margin-left: 1em;
+  padding: .1em 0 .1em 1.3em;
+  //font-size: $font-size-large;
+  //font-weight: $font-weight-normal;
+  //line-height: $line-height-large;
+}
+
+figure {
+  border-radius: .87em;
+  margin-top: 2.7em;
+  margin-bottom: 2.7em;
+  overflow: hidden;
+}
+
+figcaption {
+  text-align: center;
+  background-color: var(--background);
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 1.2em 7%;
+  // font-size: $font-size-normal;
+  line-height: 145%;
 }
 
 .heading {

@@ -1,4 +1,4 @@
-@import '../abstracts/mixins';
+@use '../abstracts' as *;
 
 .block-video {
   width: 100%;

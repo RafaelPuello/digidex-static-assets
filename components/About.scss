@@ -1,5 +1,4 @@
-@import '../abstracts/variables';
-@import '../abstracts/mixins';
+@use '../abstracts' as *;
 
 .grid-about {
   grid-column-gap: 1.5em;
@@ -36,18 +35,18 @@
   }
 
   &.red {
-    color: $primary-a2;
-    background-color: $secondary-b2;
+    color: var(--accent-a2);
+    background-color: var(--accent-b2);
   }
 
   &.blue {
-    background-color: $secondary-b3;
-    color: $primary-a3;
+    background-color: var(--accent-b3);
+    color: var(--accent-a3);
   }
 
   &.green {
-    background-color: $secondary-b1;
-    color: $primary-a1;
+    background-color: var(--accent-b1);
+    color: var(--accent-a1);
   }
 }
 
@@ -61,15 +60,15 @@
   display: flex;
 
   &.red {
-    background-color: $primary-a2;
+    background-color: var(--accent-a2);
   }
 
   &.blue {
-    background-color: $primary-a3;
+    background-color: var(--accent-a3);
   }
 
   &.green {
-    background-color: $primary-a1;
+    background-color: var(--accent-a1);
   }
 }
 
@@ -80,17 +79,17 @@
 }
 
 .heading-about {
-  color: $primary-a1;
+  color: var(--accent-a1);
 
   &.red {
-    color: $primary-a2;
+    color: var(--accent-a2);
   }
 
   &.blue {
-    color: $primary-a3;
+    color: var(--accent-a3);
   }
 
   &.green {
-    color: $primary-a1;
+    color: var(--accent-a1);
   }
 }

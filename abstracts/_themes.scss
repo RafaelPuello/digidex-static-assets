@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "colors" as *;
 
 /* -----------------------------------
@@ -182,7 +183,7 @@ $themes: (
 );
 
 $light-theme-name: g;
-$light-theme: map-get($themes, $light-theme-name);
+$light-theme: map.get($themes, $light-theme-name);
 
 $dark-theme-name: g-dark;
-$dark-theme: map-get($themes, $dark-theme-name);
+$dark-theme: map.get($themes, $dark-theme-name);

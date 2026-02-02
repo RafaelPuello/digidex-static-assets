@@ -1,20 +1,19 @@
-@import '../abstracts/variables';
-@import '../abstracts/mixins';
+@use '../abstracts' as *;
 
 .link {
-  border-bottom: 1px solid $primary-a1;
-  color: $primary-a1;
+  border-bottom: 1px solid var(--accent-a1);
+  color: var(--accent-a1);
   text-decoration: none;
   transition: border-color .3s cubic-bezier(.25, .46, .45, .94), color .3s cubic-bezier(.25, .46, .45, .94);
 
   &:hover {
-    border-bottom-color: $heading;
-    color: $heading;
+    border-bottom-color: var(--heading);
+    color: var(--heading);
   }
 }
 
 .text-link {
-  color: $primary-a1;
+  color: var(--accent-a1);
   letter-spacing: -.02em;
   font-size: 1em;
   font-weight: $font-weight-normal;
@@ -27,7 +26,7 @@
 }
 
 .block-icon-link {
-  background-color: $secondary-b1;
+  background-color: var(--accent-b1);
   border-radius: 100%;
   justify-content: center;
   align-items: center;
@@ -49,7 +48,7 @@
   display: flex;
 
   &:hover {
-    background-color: $secondary-b1;
+    background-color: var(--accent-b1);
     padding-left: 1em;
   }
 }

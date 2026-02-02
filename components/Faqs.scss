@@ -1,5 +1,4 @@
-@import '../abstracts/variables';
-@import '../abstracts/mixins';
+@use '../abstracts' as *;
 
 .grid-faq {
   grid-column-gap: 1.13em;
@@ -32,12 +31,12 @@
 }
 
 .accordion-item {
-  background-color: $white;
+  background-color: var(--foreground);
   border-radius: .87em;
   width: 100%;
   padding-left: 1.8em;
   padding-right: 1.2em;
-  box-shadow: 0 15px 25px -10px $shadow-c1;
+  box-shadow: 0 15px 25px -10px var(--accent-c1);
 }
 
 .accordion-header {
@@ -69,8 +68,8 @@
 }
 
 .block-icon-accordion {
-  background-color: $secondary-b1;
-  border: 1px solid #fff3;
+  background-color: var(--accent-b1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 100%;
   flex: none;
   justify-content: center;

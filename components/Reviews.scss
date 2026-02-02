@@ -1,5 +1,4 @@
-@import '../abstracts/variables';
-@import '../abstracts/mixins';
+@use '../abstracts' as *;
 
 .block-reviews {
   grid-column-gap: .88em;
@@ -30,7 +29,7 @@
 .review {
   grid-column-gap: .94em;
   grid-row-gap: .94em;
-  background-color: $white;
+  background-color: var(--foreground);
   border-radius: .87em;
   flex-direction: column;
   justify-content: flex-start;
@@ -39,7 +38,7 @@
   margin-bottom: .44em;
   padding: 2em;
   display: flex;
-  box-shadow: 0 15px 25px -10px $shadow-c1;
+  box-shadow: 0 15px 25px -10px var(--accent-c1);
 
   @include respond-to(medium) {
     padding: 1.6em;
@@ -52,7 +51,7 @@
 }
 
 .review-name {
-  color: $heading;
+  color: var(--heading);
   letter-spacing: -.02em;
   font-size: .87em;
   font-weight: $font-weight-normal;
@@ -95,7 +94,7 @@
 
 .gradient-reviews {
   z-index: 50;
-  background-image: linear-gradient(to bottom, $background, #f4f6f700 10%, #f4f6f700 90%, $background);
+  background-image: linear-gradient(to bottom, var(--background), transparent 10%, transparent 90%, var(--background));
   position: absolute;
   inset: 0%;
 }

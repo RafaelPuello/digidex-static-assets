@@ -1,5 +1,4 @@
-@import '../abstracts/variables';
-@import '../abstracts/mixins';
+@use '../abstracts' as *;
 
 .collection-list-shop {
   grid-column-gap: 1.5em;
@@ -21,7 +20,7 @@
 }
 
 .product {
-  background-color: $white;
+  background-color: var(--foreground);
   text-align: left;
   border-radius: .87em;
   flex-direction: column;
@@ -30,7 +29,7 @@
   padding: 2.4em;
   display: flex;
   position: relative;
-  box-shadow: 0 15px 25px -10px $shadow-c1;
+  box-shadow: 0 15px 25px -10px var(--accent-c1);
 
   @include respond-to(small) {
     padding: 1.5em;
@@ -41,7 +40,7 @@
   z-index: auto;
   grid-column-gap: 16px;
   grid-row-gap: 16px;
-  background-color: $secondary-b1;
+  background-color: var(--accent-b1);
   border-radius: .87em;
   flex-flow: row;
   grid-template-rows: auto auto;
@@ -68,7 +67,7 @@
 }
 
 .text-price {
-  color: $primary-a1;
+  color: var(--accent-a1);
   letter-spacing: -.01em;
   font-size: 1.2em;
   font-weight: 600;
@@ -90,7 +89,7 @@
 }
 
 .compare-at-price {
-  color: #14171880;
+  color: var(--accent-h1);
   letter-spacing: -.01em;
   font-size: 1em;
   font-weight: 400;
@@ -105,11 +104,11 @@
 }
 
 .subtitle-product {
-  color: #14171880;
+  color: var(--accent-h1);
   letter-spacing: .05em;
   text-transform: uppercase;
   margin-bottom: 1.4em;
-  font-family: $w-font-mono;
+  font-family: var(--font-mono);
   font-size: .7em;
   font-weight: $font-weight-normal;
   line-height: $line-height-normal;
@@ -149,38 +148,38 @@
 }
 
 .yellow-tag-product {
-  background-color: $primary-a4;
-  color: $heading;
+  background-color: var(--accent-a4);
+  color: var(--heading);
   letter-spacing: .05em;
   text-transform: uppercase;
   border-radius: .6em;
   padding: .7em 1.1em;
-  font-family: $w-font-mono;
+  font-family: var(--font-mono);
   font-size: .7em;
   font-weight: $font-weight-normal;
   line-height: 110%;
 }
 
 .green-tag-product {
-  background-color: $primary-a3;
-  color: $white;
+  background-color: var(--accent-a3);
+  color: var(--foreground);
   letter-spacing: .05em;
   text-transform: uppercase;
   border-radius: .6em;
   padding: .7em 1.1em;
-  font-family: $w-font-mono;
+  font-family: var(--font-mono);
   font-size: .7em;
   font-weight: $font-weight-normal;
   line-height: 110%;
 }
 
 .field-label {
-  color: $heading;
+  color: var(--heading);
   text-align: left;
   letter-spacing: .05em;
   text-transform: uppercase;
   margin-bottom: .5em;
-  font-family: $w-font-mono;
+  font-family: var(--font-mono);
   font-size: .7em;
   font-weight: $font-weight-normal;
   line-height: $line-height-normal;
@@ -204,9 +203,9 @@
 }
 
 .quantity {
-  border-color: $border;
-  background-color: $white;
-  color: $heading;
+  border-color: var(--border);
+  background-color: var(--foreground);
+  color: var(--heading);
   border-radius: .62em;
   width: 4.4em;
   height: 3.4em;
@@ -218,13 +217,13 @@
   transition: border-color .3s cubic-bezier(.25, .46, .45, .94);
 
   &:focus {
-    border-color: $primary-a1;
+    border-color: var(--accent-a1);
   }
 }
 
 .add-to-cart-button {
-  background-color: $primary-a1;
-  color: $white;
+  background-color: var(--accent-a1);
+  color: var(--foreground);
   letter-spacing: -.02em;
   border-radius: 50em;
   padding: .9em 1.8em;
@@ -234,13 +233,13 @@
   transition: box-shadow .3s cubic-bezier(.25, .46, .45, .94), background-color .3s cubic-bezier(.25, .46, .45, .94);
 
   &:hover {
-    box-shadow: 0 15px 40px -10px $primary-a1;
+    box-shadow: 0 15px 40px -10px var(--accent-a1);
   }
 }
 
 .buy-now-button {
-  background-color: $primary-a1;
-  color: $white;
+  background-color: var(--accent-a1);
+  color: var(--foreground);
   letter-spacing: -.02em;
   border-radius: 50em;
   margin-top: .8em;
@@ -251,15 +250,15 @@
   transition: box-shadow .3s cubic-bezier(.25, .46, .45, .94), background-color .3s cubic-bezier(.25, .46, .45, .94);
 
   &:hover {
-    box-shadow: 0 15px 40px -10px $primary-a1;
+    box-shadow: 0 15px 40px -10px var(--accent-a1);
   }
 
   &.yellow {
-    background-color: $primary-a4;
-    color: $heading;
-  
+    background-color: var(--accent-a4);
+    color: var(--heading);
+
     &:hover {
-      box-shadow: 0 15px 40px -10px $primary-a4;
+      box-shadow: 0 15px 40px -10px var(--accent-a4);
     }
   }
 }
@@ -269,12 +268,12 @@
 }
 
 .field-label-quantity {
-  color: #14171880;
+  color: var(--accent-h1);
   text-align: left;
   letter-spacing: .05em;
   text-transform: uppercase;
   margin-bottom: .5em;
-  font-family: $w-font-mono;
+  font-family: var(--font-mono);
   font-size: .7em;
   font-weight: $font-weight-normal;
   line-height: $line-height-normal;
@@ -282,14 +281,14 @@
 }
 
 .out-of-stock-state {
-  background-color: #bc000312;
+  background-color: rgba(188, 0, 3, 0.07);
   border-radius: .87em;
   margin-top: 0;
   padding: 1em 10%;
 }
 
 .product-content {
-  background-color: $white;
+  background-color: var(--foreground);
   border-radius: .87em;
   flex-direction: column;
   justify-content: flex-start;
@@ -297,7 +296,7 @@
   padding: 3.1em;
   display: flex;
   position: relative;
-  box-shadow: 0 15px 25px -10px $shadow-c1;
+  box-shadow: 0 15px 25px -10px var(--accent-c1);
 
   @include respond-to(small) {
     padding: 2em;
@@ -305,7 +304,7 @@
 }
 
 .product-sticky {
-  background-color: $white;
+  background-color: var(--foreground);
   border-radius: .87em;
   flex-direction: column;
   justify-content: flex-start;
@@ -314,7 +313,7 @@
   display: flex;
   position: sticky;
   top: 100px;
-  box-shadow: 0 15px 25px -10px $shadow-c1;
+  box-shadow: 0 15px 25px -10px var(--accent-c1);
 
   @include respond-to(large) {
     padding: 3.1em;

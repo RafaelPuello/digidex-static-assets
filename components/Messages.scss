@@ -1,5 +1,4 @@
-@import '../abstracts/variables';
-@import '../abstracts/mixins';
+@use '../abstracts' as *;
 
 .section-messages {
   flex-direction: column;
@@ -28,19 +27,19 @@
   display: flex;
 
   &.info {
-    background-color: $w-color-positive-100;
+    background-color: #d1fae5; // positive/success green
   }
 
   &.success {
-    background-color: $w-color-info-100;
+    background-color: #dbeafe; // info blue
   }
 
   &.warning {
-    background-color: $w-color-warning-100;
+    background-color: #fef3c7; // warning amber
   }
 
   &.error {
-    background-color: $w-color-critical-100;
+    background-color: #fee2e2; // critical red
   }
 
   @include respond-to(small) {
@@ -52,7 +51,7 @@
 
 .item-messages {
   opacity: .7;
-  color: $white;
+  color: var(--foreground);
   letter-spacing: -.02em;
   font-size: .87em;
   line-height: $line-height-small;

@@ -1,20 +1,19 @@
-@import '../abstracts/variables';
-@import '../abstracts/mixins';
+@use '../abstracts' as *;
 
 .text-info {
-  color: $heading;
+  color: var(--heading);
   letter-spacing: .05em;
   text-transform: uppercase;
   margin-left: 1em;
   margin-right: 1em;
-  font-family: $w-font-mono;
+  font-family: var(--font-mono);
   font-size: .7em;
   font-weight: $font-weight-normal;
   line-height: 110%;
 }
 
 .link-info {
-  background-color: $white;
+  background-color: var(--foreground);
   border-radius: 50em;
   justify-content: flex-start;
   align-items: center;
@@ -25,12 +24,12 @@
   display: flex;
 
   &:hover {
-    background-color: $primary-a4;
+    background-color: var(--accent-a4);
   }
 }
 
 .block-icon-info {
-  background-color: $primary-a4;
+  background-color: var(--accent-a4);
   border-radius: 100%;
   justify-content: center;
   align-items: center;

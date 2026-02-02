@@ -1,12 +1,11 @@
-@import '../abstracts/variables';
-@import '../abstracts/mixins';
+@use '../abstracts' as *;
 
 .cart {
   flex: none;
 }
 
 .cart-button {
-  background-color: $primary-a1;
+  background-color: var(--accent-a1);
   border-radius: 50em;
   flex-direction: row;
   justify-content: center;
@@ -17,7 +16,7 @@
   position: relative;
 
   &:hover {
-    box-shadow: 0 15px 30px -8px $primary-a1;
+    box-shadow: 0 15px 30px -8px var(--accent-a1);
   }
 }
 
@@ -28,8 +27,8 @@
 }
 
 .icon-cart-quantity {
-  background-color: $white;
-  color: $heading;
+  background-color: var(--foreground);
+  color: var(--heading);
   border-radius: 50em;
   min-width: auto;
   height: auto;
@@ -40,21 +39,21 @@
   line-height: $line-height-normal;
   position: absolute;
   inset: -15% -20% auto auto;
-  box-shadow: 0 5px 5px $shadow-c1;
+  box-shadow: 0 5px 5px var(--accent-c1);
 }
 
 .cart-wrapper {
-  background-color: #0000;
+  background-color: transparent;
 }
 
 .cart-container {
-  background-color: $white;
+  background-color: var(--foreground);
   border-radius: .87em;
   width: 100%;
   min-width: 22em;
   max-width: 30em;
   margin-top: .7em;
-  box-shadow: 0 15px 25px -5px #14171826;
+  box-shadow: 0 15px 25px -5px var(--accent-c1);
 
   @include respond-to(small) {
     border-radius: 0;
@@ -64,7 +63,7 @@
 }
 
 .cart-header {
-  border-bottom-color: $border;
+  border-bottom-color: var(--border);
   padding: 1em 1.5em;
 }
 
@@ -95,7 +94,7 @@
 }
 
 .image-cart-item {
-  background-color: $secondary-b1;
+  background-color: var(--accent-b1);
   object-fit: cover;
   border-radius: .62em;
   width: 3.5em;
@@ -109,7 +108,7 @@
 }
 
 .cart-item-name {
-  color: $heading;
+  color: var(--heading);
   letter-spacing: -.02em;
   font-size: 1.05em;
   font-weight: 600;
@@ -117,7 +116,7 @@
 }
 
 .cart-item-price {
-  color: $primary-a1;
+  color: var(--accent-a1);
   margin-bottom: .6em;
   font-size: .9em;
   font-weight: 600;
@@ -125,10 +124,10 @@
 }
 
 .remove-button {
-  color: #141718b3;
+  color: var(--accent-h1);
   letter-spacing: .05em;
   text-transform: uppercase;
-  font-family: $w-font-mono;
+  font-family: var(--font-mono);
   font-size: .7em;
   font-weight: $font-weight-normal;
   line-height: $line-height-normal;
@@ -136,14 +135,14 @@
   transition: color .3s cubic-bezier(.25, .46, .45, .94);
 
   &:hover {
-    color: $primary-a1;
+    color: var(--accent-a1);
   }
 }
 
 .cart-quantity {
-  border-color: $border;
-  background-color: $white;
-  color: $heading;
+  border-color: var(--border);
+  background-color: var(--foreground);
+  color: var(--heading);
   border-radius: .62em;
   width: 3.7em;
   height: 2.4em;
@@ -155,7 +154,7 @@
   transition: border-color .3s cubic-bezier(.25, .46, .45, .94);
 
   &:focus {
-    border-color: $primary-a1;
+    border-color: var(--accent-a1);
   }
 }
 
@@ -168,7 +167,7 @@
 }
 
 .text-subtotal {
-  color: $heading;
+  color: var(--heading);
   font-size: 1.2em;
   font-weight: 600;
 }
@@ -179,8 +178,8 @@
 }
 
 .checkout-button {
-  background-color: $primary-a1;
-  color: $white;
+  background-color: var(--accent-a1);
+  color: var(--foreground);
   letter-spacing: -.02em;
   border-radius: 50em;
   margin-top: 1em;
@@ -191,7 +190,7 @@
   transition: box-shadow .3s cubic-bezier(.25, .46, .45, .94), background-color .3s cubic-bezier(.25, .46, .45, .94);
 
   &:hover {
-    box-shadow: 0 15px 40px -10px $primary-a1;
+    box-shadow: 0 15px 40px -10px var(--accent-a1);
   }
 }
 
@@ -202,14 +201,14 @@
 }
 
 .text-cart-empty {
-  color: $heading;
+  color: var(--heading);
   margin-bottom: 1em;
   font-size: 1em;
   line-height: $line-height-normal;
 }
 
 .cart-error-state {
-  background-color: #bc000312;
+  background-color: rgba(188, 0, 3, 0.07);
   border-radius: .62em;
   margin: 0 1.5em 1.5em;
   padding: 1em 1.4em;

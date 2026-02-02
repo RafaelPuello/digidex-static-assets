@@ -1,20 +1,19 @@
-@import '../abstracts/variables';
-@import '../abstracts/mixins';
+@use '../abstracts' as *;
 
 .empty-state {
-  background-color: $white;
+  background-color: var(--foreground);
   text-align: center;
   border-radius: .87em;
   padding: 1em 1.4em;
-  box-shadow: 0 15px 25px -10px $shadow-c1;
+  box-shadow: 0 15px 25px -10px var(--accent-c1);
 }
 
 .text-empty {
   opacity: .7;
-  color: $heading;
+  color: var(--heading);
   letter-spacing: .05em;
   text-transform: uppercase;
-  font-family: $w-font-mono;
+  font-family: var(--font-mono);
   font-size: .7em;
   font-weight: $font-weight-normal;
   line-height: $line-height-normal;

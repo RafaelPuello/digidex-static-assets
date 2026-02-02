@@ -1,5 +1,4 @@
-@import '../abstracts/variables';
-@import '../abstracts/mixins';
+@use '../abstracts' as *;
 
 .lottie {
   position: relative;
@@ -18,7 +17,7 @@
 }
 
 .line-w {
-  background-image: linear-gradient(to bottom, #0f649200, $border 10%, $border 90%, #0f649200);
+  background-image: linear-gradient(to bottom, transparent, var(--border) 10%, var(--border) 90%, transparent);
   width: 1px;
 }
 
@@ -121,11 +120,11 @@
 }
 
 .line-h {
-  background-image: linear-gradient(to right, #0f649200, $border 10%, $border 90%, #0f649200);
+  background-image: linear-gradient(to right, transparent, var(--border) 10%, var(--border) 90%, transparent);
   height: 1px;
 }
 
 .line-banner-h {
-  background-image: linear-gradient(to right, #fff0, #fff3 10% 90%, #fff0);
+  background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2) 10% 90%, transparent);
   height: 1px;
 }

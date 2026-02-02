@@ -1,5 +1,4 @@
-@import '../abstracts/variables';
-@import '../abstracts/mixins';
+@use '../abstracts' as *;
 
 .list {
   grid-column-gap: .7em;
@@ -24,31 +23,31 @@
   display: flex;
 
   &.red {
-    background-color: $secondary-b2;
+    background-color: var(--accent-b2);
   }
 
   &.blue {
-    background-color: $secondary-b3;
+    background-color: var(--accent-b3);
   }
 
   &.green {
-    background-color: $secondary-b1;
+    background-color: var(--accent-b1);
   }
 }
 
 .heading-list {
-  color: $primary-a1;
+  color: var(--accent-a1);
 
   &.red {
-    color: $primary-a2;
+    color: var(--accent-a2);
   }
 
   &.blue {
-    color: $primary-a3;
+    color: var(--accent-a3);
   }
 
   &.green {
-    color: $primary-a1;
+    color: var(--accent-a1);
   }
 }
 

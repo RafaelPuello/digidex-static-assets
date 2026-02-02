@@ -1,5 +1,4 @@
-@import '../abstracts/variables';
-@import '../abstracts/mixins';
+@use '../abstracts' as *;
 
 .clients {
   text-align: center;
@@ -12,11 +11,11 @@
 
 .subtitle-clients {
   opacity: .7;
-  color: $heading;
+  color: var(--heading);
   letter-spacing: .05em;
   text-transform: uppercase;
   margin-bottom: 2.3em;
-  font-family: $w-font-mono;
+  font-family: var(--font-mono);
   font-size: .7em;
   font-weight: $font-weight-normal;
   line-height: $line-height-normal;
@@ -34,7 +33,7 @@
 
 .gradient-clients {
   z-index: 50;
-  background-image: linear-gradient(to right, $background 5%, #f4f6f700 20%, #f4f6f700 80%, $background 95%);
+  background-image: linear-gradient(to right, var(--background) 5%, transparent 20%, transparent 80%, var(--background) 95%);
   position: absolute;
   inset: 0%;
 }

@@ -1,14 +1,13 @@
-@import '../abstracts/variables';
-@import '../abstracts/mixins';
+@use '../abstracts' as *;
 
 .yellow-tag {
-  background-color: $primary-a4;
-  color: $heading;
+  background-color: var(--accent-a4);
+  color: var(--heading);
   letter-spacing: .05em;
   text-transform: uppercase;
   border-radius: .6em;
   padding: .7em 1.1em;
-  font-family: $w-font-mono;
+  font-family: var(--font-mono);
   font-size: .7em;
   font-weight: $font-weight-normal;
   line-height: 110%;
@@ -17,13 +16,13 @@
 }
 
 .green-tag {
-  background-color: $primary-a3;
-  color: $white;
+  background-color: var(--accent-a3);
+  color: var(--foreground);
   letter-spacing: .05em;
   text-transform: uppercase;
   border-radius: .6em;
   padding: .7em 1.1em;
-  font-family: $w-font-mono;
+  font-family: var(--font-mono);
   font-size: .7em;
   font-weight: $font-weight-normal;
   line-height: 110%;
