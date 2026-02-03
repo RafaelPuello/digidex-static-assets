@@ -1,0 +1,296 @@
+@use '../abstracts' as *;
+
+// ── Orders page wrapper ───────────────────────────────────────────────
+
+.orders-page {
+  width: 100%;
+  max-width: 75em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+
+  @include respond-to(small) {
+    padding: 1rem;
+  }
+}
+
+.orders-page-title {
+  color: var(--heading);
+  font-size: $h4-font-size;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-normal;
+}
+
+// ── Empty state ───────────────────────────────────────────────────────
+
+.orders-empty {
+  margin-top: 2rem;
+}
+
+.orders-empty-card {
+  background-color: var(--foreground);
+  border: 1px solid var(--border);
+  border-radius: 0.62em;
+  padding: 1rem 1.5rem;
+  color: var(--heading);
+  font-size: $font-size-normal;
+  font-weight: $font-weight-base;
+  line-height: $line-height-normal;
+}
+
+// ── Order list ────────────────────────────────────────────────────────
+
+.orders-list {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+// ── Single order card ─────────────────────────────────────────────────
+
+.order-item {
+  background-color: var(--foreground);
+  border-radius: 0.62em;
+  overflow: hidden;
+  box-shadow: 0 15px 25px -10px var(--accent-c1);
+}
+
+// ── Order header row (number / date / payment) ───────────────────────
+
+.order-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: var(--accent-b1);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 1.5rem;
+
+  @include respond-to(large) {
+    // tablet and up: switch to a 4-col grid
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}
+
+// The <dl> that wraps the three meta fields
+.order-header-meta {
+  display: flex;
+  flex-direction: column;
+  divide-y: 1px solid var(--border); // fallback; real dividers handled per-item below
+  gap: 0;
+
+  @include respond-to(large) {
+    // spans first 3 of 4 columns and becomes its own 3-col grid
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+// Each dt/dd pair inside the meta list
+.order-header-field {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  @include respond-to(large) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+    padding: 0;
+    border-bottom: none;
+  }
+}
+
+.order-header-label {
+  color: var(--heading);
+  font-size: $font-size-normal;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-normal;
+}
+
+.order-header-value {
+  color: var(--accent-h1);
+  font-size: $font-size-normal;
+  font-weight: $font-weight-base;
+  line-height: $line-height-normal;
+}
+
+// ── Line-items table wrapper ──────────────────────────────────────────
+// Uses the shared .table / .table-bordered classes from _table.scss for
+// thead/tbody chrome.  These selectors only add order-specific overrides.
+
+.order-lines-wrapper {
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  padding: 0 1.5rem;
+
+  @include respond-to(medium) {
+    padding: 0;
+    border-left: none;
+    border-right: none;
+  }
+}
+
+.order-lines-table {
+  width: 100%;
+  color: var(--accent-h1);
+  font-size: $font-size-normal;
+}
+
+// The visually-hidden thead (screen-reader only)
+.order-lines-table thead {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.order-lines-table tbody tr {
+  border-bottom: 1px solid var(--border);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+// Product cell (image + name + variant)
+.order-line-product {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1.5rem 1.5rem 1.5rem 0;
+  width: 60%;
+
+  @include respond-to(large) {
+    width: 70%;
+  }
+}
+
+.order-line-thumbnail {
+  flex-shrink: 0;
+  aspect-ratio: 1 / 1;
+  width: 4rem;
+  height: 4rem;
+  overflow: hidden;
+  border-radius: 0.5em;
+  border: 1px solid var(--border);
+  background-color: var(--accent-b1);
+  margin-right: 0.75rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  @include respond-to(large) {
+    width: 6rem;
+    height: 6rem;
+    margin-right: 1.5rem;
+  }
+}
+
+.order-line-name {
+  color: var(--heading);
+  font-size: $font-size-normal;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-normal;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--accent-a1);
+  }
+}
+
+.order-line-variant {
+  color: var(--accent-h1);
+  font-size: $font-size-normal;
+  font-weight: $font-weight-base;
+  line-height: $line-height-normal;
+  margin-top: 0.25rem;
+}
+
+// Quantity × unit-price cell (hidden on mobile)
+.order-line-unit {
+  padding: 1.5rem 1.5rem 1.5rem 0;
+
+  &.is-hidden-mobile {
+    display: none;
+
+    @include respond-to(large) {
+      // "large" here is max-width 991 — we want it hidden below that
+    }
+  }
+}
+
+// Total price cell
+.order-line-total {
+  text-align: right;
+  padding: 1.5rem 0;
+}
+
+.order-line-total-value {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  color: var(--heading);
+  font-size: $font-size-normal;
+  font-weight: $font-weight-base;
+  line-height: $line-height-normal;
+}
+
+// The per-unit breakdown shown on mobile only (when qty > 1)
+.order-line-unit-mobile {
+  font-size: 0.75rem;
+  color: var(--accent-h1);
+
+  // visible only below the medium breakpoint (max-width 767)
+  @include respond-to(large) {
+    display: none;
+  }
+}
+
+// ── Order totals footer row ───────────────────────────────────────────
+
+.order-totals {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.order-totals-label {
+  color: var(--heading);
+  font-size: $font-size-normal;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-normal;
+}
+
+.order-totals-value {
+  color: var(--heading);
+  font-size: $font-size-normal;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-normal;
+}

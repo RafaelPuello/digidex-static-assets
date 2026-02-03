@@ -873,4 +873,14 @@
         }
     }
 }
+
+/* ── Nav Suspense placeholders ── */
+/* Minimal-width skeleton boxes rendered while nav children load */
+.nav-placeholder {
+    display: inline-block;
+    height: 1.5rem;            /* comfortable vertical size for a nav icon */
+
+    &.w-sm  { width: 1.5rem; } /* 24px — icon-sized (cart badge) */
+    &.w-md  { width: 2rem; }   /* 32px — avatar-sized  */
+}
                                 

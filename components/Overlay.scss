@@ -1,0 +1,9 @@
+@use '../abstracts' as *;
+
+// Full-viewport semi-transparent backdrop, used behind modals and drawers
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(var(--accent-g1), 0.75);
+  transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}

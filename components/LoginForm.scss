@@ -1,0 +1,98 @@
+@use '../abstracts' as *;
+
+// ── Outer wrapper ─────────────────────────────────────────────────────
+// Horizontally centres the card and pushes it down from the top of the
+// viewport so the form feels vertically anchored rather than flush.
+
+.login-wrapper {
+  width: 100%;
+  max-width: 32em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+}
+
+// ── Card ──────────────────────────────────────────────────────────────
+// Mirrors the shape used by .account-form in _accounts.scss.
+
+.login-card {
+  background-color: var(--foreground);
+  border-radius: 0.87em;
+  padding: 2rem;
+  box-shadow: 0 15px 25px -10px var(--accent-c1);
+
+  @include respond-to(small) {
+    padding: 1.5rem;
+  }
+}
+
+// ── Field groups ──────────────────────────────────────────────────────
+
+.login-field {
+  position: relative;
+  margin-bottom: 0.75rem;
+
+  &:last-of-type {
+    margin-bottom: 1rem;
+  }
+}
+
+// Screen-reader-only labels (visual label is the placeholder)
+.login-field .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+// ── Inputs ────────────────────────────────────────────────────────────
+
+.login-input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--border);
+  border-radius: 0.5em;
+  background-color: var(--accent-b1);
+  color: var(--heading);
+  padding: 0.6em 1em;
+  font-size: 1rem;
+  line-height: $line-height-normal;
+  transition: border-color 0.3s cubic-bezier(.25, .46, .45, .94);
+
+  &::placeholder {
+    color: var(--accent-h1);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--accent-a1);
+  }
+}
+
+// ── Submit button ─────────────────────────────────────────────────────
+
+.login-submit {
+  display: inline-block;
+  background-color: var(--heading);
+  color: var(--foreground);
+  border: none;
+  border-radius: 0.5em;
+  padding: 0.6em 1.5em;
+  font-size: 1rem;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-normal;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.3s cubic-bezier(.25, .46, .45, .94);
+
+  &:hover {
+    background-color: var(--accent-h1);
+  }
+}

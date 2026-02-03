@@ -1,0 +1,31 @@
+@use '../abstracts' as *;
+
+// Keyframes for the spinner rotation
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+// Outer wrapper: centers content horizontally
+.loader {
+  text-align: center;
+}
+
+// The SVG spinner itself
+.loader-spinner {
+  display: inline-block;
+  width: 3rem;      // 48px — matches Tailwind h-12 w-12
+  height: 3rem;
+  margin-right: 0.5rem;
+  animation: spin 1s linear infinite;
+
+  // Track arc (background ring)
+  .loader-track {
+    fill: var(--accent-h1);   // muted foreground tone
+  }
+
+  // Animated arc (foreground ring)
+  .loader-arc {
+    fill: var(--accent-a1);   // primary accent
+  }
+}

@@ -1,0 +1,17 @@
+@use '../abstracts' as *;
+
+// Fixed notification bar shown only when Next.js draft mode is active
+.draft-mode-notification {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 50;
+  background-color: #fee2e2;   // soft red background (matches Tailwind red-100)
+  color: #b91c1c;              // accessible red text  (matches Tailwind red-700)
+  padding: 0.5rem 2rem;
+
+  a {
+    text-decoration: underline;
+    color: inherit;
+  }
+}

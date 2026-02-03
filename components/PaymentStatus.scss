@@ -1,0 +1,30 @@
+@use '../abstracts' as *;
+
+// Row that holds an icon + label for a payment charge state
+.payment-status {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin: 0;                   // override browser <p> margins
+
+  // Icon sizing (lucide-react renders an SVG)
+  svg {
+    width: 1rem;               // 16px — matches Tailwind h-4 w-4
+    height: 1rem;
+    flex-shrink: 0;
+  }
+
+  // ── Semantic colour variants ──────────────────────────────────
+
+  &.status-error {
+    color: #ef4444;            // red-500 — visible on both light and dark surfaces
+  }
+
+  &.status-success {
+    color: #16a34a;            // green-600
+  }
+
+  &.status-warning {
+    color: #ca8a04;            // yellow-600 (better contrast than yellow-500)
+  }
+}
