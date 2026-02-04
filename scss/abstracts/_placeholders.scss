@@ -1,0 +1,16 @@
+@use 'variables';
+
+%block-shared {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  display: flex;
+}
+
+%button-shared {
+  font-size: variables.$btn-font-size;
+  font-weight: variables.$btn-font-weight;
+  line-height: variables.$btn-line-height;
+  text-decoration: none;
+  display: inline-block;
+}

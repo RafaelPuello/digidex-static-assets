@@ -237,8 +237,9 @@
   &.is-hidden-mobile {
     display: none;
 
-    @include respond-to(large) {
-      // "large" here is max-width 991 — we want it hidden below that
+    // Show at and above the medium breakpoint (768px) — matches Tailwind md
+    @media only screen and (min-width: 48rem) {
+      display: table-cell;
     }
   }
 }
@@ -264,8 +265,8 @@
   font-size: 0.75rem;
   color: var(--accent-h1);
 
-  // visible only below the medium breakpoint (max-width 767)
-  @include respond-to(large) {
+  // hidden at and above the medium breakpoint (768px) — matches Tailwind md:hidden
+  @media only screen and (min-width: 48rem) {
     display: none;
   }
 }

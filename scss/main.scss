@@ -1,0 +1,20 @@
+///
+/// Wagtail CRX Sass starter template
+///
+/// Import scss sources from the coderedcms pip package,
+/// or from your own local directory as needed.
+///
+
+// Use custom variables.
+@use "abstracts" as *;
+
+// Import Bootstrap. Alternatively, change this to import individual components
+// of Bootstrap as needed.
+// @import "coderedcms/vendor/bootstrap/scss/bootstrap";
+
+@use "base";
+@use "pages";
+@use "components";
+@use "layout";
+@use "pages";
+@use "themes";

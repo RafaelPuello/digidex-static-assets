@@ -1,0 +1,26 @@
+@use "colors" as *;
+
+$theme-nature: (
+  background: $nature-grey-50,
+  foreground: $nature-white,
+
+  border: rgba($nature-green-150, 0.2),
+  heading: $nature-green-200,
+  paragraph: rgba($nature-green-200, 0.8),
+
+  accent-a1: $nature-green-150,
+  accent-b1: rgba($nature-green-150, 0.07),
+  accent-c1: rgba($nature-green-150, 0.05),
+  accent-d1: $nature-green-100,
+  accent-e1: rgba($nature-green-150, 0.2),
+  accent-f1: $nature-green-50,
+  accent-g1: $nature-black,
+  accent-h1: rgba($nature-black, 0.6),
+
+  accent-a2: $nature-magenta-200,
+  accent-b2: rgba($nature-magenta-200, 0.07),
+  accent-a3: $nature-blue-200,
+  accent-b3: rgba($nature-blue-200, 0.07),
+
+  accent-a4: $nature-amber-75
+)

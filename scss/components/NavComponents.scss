@@ -1,0 +1,451 @@
+@use '../abstracts' as *;
+
+// ============================================================================
+// Nav Sub-Components
+// Styles for cart badge, search bar, user menu, and mobile menu components
+// ============================================================================
+
+// ── Cart Nav Item ──────────────────────────────────────────────────────────
+
+.cart-nav-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--heading);
+}
+
+.cart-nav-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+}
+
+.cart-badge {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: -0.5rem;
+  margin-right: -0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 1rem;
+  border-radius: 9999px;
+  background-color: var(--heading);
+  color: var(--foreground);
+  font-size: 0.75rem;
+  font-weight: $font-weight-semibold;
+
+  &.is-single-digit {
+    width: 2ch;
+  }
+
+  &.is-double-digit {
+    width: 3ch;
+  }
+}
+
+// ── Search Bar ─────────────────────────────────────────────────────────────
+
+.search-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: $font-size-normal;
+
+  @include respond-to(large) {
+    width: 20rem;
+  }
+}
+
+.search-label {
+  width: 100%;
+}
+
+.search-input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 2.5rem;
+  padding: 0.5rem 2.5rem 0.5rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background-color: var(--foreground);
+  color: var(--heading);
+  font-size: $font-size-normal;
+  line-height: $line-height-normal;
+  transition: border-color 0.2s ease;
+
+  &::placeholder {
+    color: var(--accent-h1);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--heading);
+  }
+}
+
+.search-button-wrapper {
+  position: absolute;
+  inset: 0;
+  left: auto;
+  right: 0;
+}
+
+.search-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  width: 2.5rem;
+  height: 100%;
+  background: transparent;
+  border: none;
+  color: var(--accent-h1);
+  cursor: pointer;
+  transition: color 0.2s ease;
+
+  &:hover,
+  &:focus {
+    color: var(--heading);
+  }
+}
+
+.search-submit-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+// Invalid state (for group-invalid behavior)
+.search-form:invalid .search-submit {
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+// ── User Menu Container ────────────────────────────────────────────────────
+
+.user-menu-login-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+  text-decoration: none;
+  color: var(--heading);
+}
+
+.user-menu-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+}
+
+// ── User Menu Dropdown ─────────────────────────────────────────────────────
+
+.user-menu {
+  position: relative;
+}
+
+.user-menu-button {
+  position: relative;
+  display: flex;
+  border-radius: 9999px;
+  background-color: var(--accent-b1);
+  font-size: $font-size-normal;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+
+  &:focus {
+    outline: none;
+    box-shadow:
+      0 0 0 2px var(--foreground),
+      0 0 0 4px var(--heading);
+  }
+}
+
+.user-menu-dropdown {
+  position: absolute;
+  right: 0;
+  z-index: 10;
+  margin-top: 0.5rem;
+  width: 12rem;
+  transform-origin: top right;
+  background-color: var(--foreground);
+  padding: 0.25rem 0;
+  text-align: left;
+  box-shadow: 0 10px 24px -6px var(--accent-c1);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.user-menu-section {
+  display: flex;
+  flex-direction: column;
+  padding: 0.25rem;
+  border-top: 1px solid var(--border);
+
+  &:first-child {
+    border-top: none;
+  }
+}
+
+.user-menu-item {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-size: $font-size-normal;
+  font-weight: $font-weight-semibold;
+  color: var(--accent-h1);
+  text-decoration: none;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.15s ease, background-color 0.15s ease;
+
+  &:hover,
+  &.is-active {
+    color: var(--heading);
+    background-color: var(--accent-b1);
+  }
+}
+
+// ── User Avatar ────────────────────────────────────────────────────────────
+
+.user-avatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.user-avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-avatar-initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  background-color: var(--foreground);
+  color: var(--heading);
+  font-size: 0.75rem;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+// ── User Info ──────────────────────────────────────────────────────────────
+
+.user-info {
+  padding: 0.5rem 1.25rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.75rem;
+  color: var(--accent-h1);
+}
+
+.user-info-name {
+  display: block;
+  margin-bottom: 0.125rem;
+  font-weight: $font-weight-bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// ── Mobile Menu Toggle ─────────────────────────────────────────────────────
+
+.mobile-menu-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  align-self: center;
+
+  @include respond-to(large) {
+    display: none;
+  }
+}
+
+.mobile-menu-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+}
+
+// ── Mobile Menu Panel ──────────────────────────────────────────────────────
+
+.mobile-menu-panel {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100dvh;
+  overflow-y: auto;
+  background-color: var(--foreground);
+}
+
+.mobile-menu-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  height: 4rem;
+  flex-shrink: 0;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  background-color: var(--foreground);
+  backdrop-filter: blur(8px);
+
+  @include respond-to(medium) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.mobile-menu-list {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0.75rem 0.75rem 0.75rem;
+  margin: 0;
+  list-style: none;
+  white-space: nowrap;
+
+  @include respond-to(medium) {
+    padding: 2rem 2rem 0;
+  }
+
+  > li {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  > li:nth-child(n+3) {
+    border-top: 1px solid var(--border);
+  }
+}
+
+// ── Transitions ────────────────────────────────────────────────────────────
+// For HeadlessUI Transition component
+
+.menu-transition-enter {
+  transition: all 0.1s ease-out;
+}
+
+.menu-transition-enter-from {
+  transform: scale(0.95);
+  opacity: 0;
+}
+
+.menu-transition-enter-to {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.menu-transition-leave {
+  transition: all 0.075s ease-in;
+}
+
+.menu-transition-leave-from {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.menu-transition-leave-to {
+  transform: scale(0.95);
+  opacity: 0;
+}
+
+// Mobile menu transitions
+.mobile-menu-transition-enter {
+  @media (prefers-reduced-motion: no-preference) {
+    transition: all 0.15s ease;
+  }
+}
+
+.mobile-menu-transition-enter-from {
+  background-color: transparent;
+}
+
+.mobile-menu-transition-enter-to {
+  background-color: var(--foreground);
+}
+
+.mobile-menu-transition-leave {
+  @media (prefers-reduced-motion: no-preference) {
+    transition: all 0.15s ease;
+  }
+}
+
+.mobile-menu-transition-leave-from {
+  background-color: var(--foreground);
+}
+
+.mobile-menu-transition-leave-to {
+  background-color: transparent;
+}
+
+.mobile-menu-content-enter {
+  @media (prefers-reduced-motion: no-preference) {
+    transition: all 0.15s ease;
+  }
+}
+
+.mobile-menu-content-enter-from {
+  opacity: 0;
+  transform: translateY(-0.75rem);
+  background-color: transparent;
+}
+
+.mobile-menu-content-enter-to {
+  opacity: 1;
+  transform: translateY(0);
+  background-color: var(--foreground);
+}
+
+.mobile-menu-content-leave {
+  @media (prefers-reduced-motion: no-preference) {
+    transition: all 0.15s ease;
+  }
+}
+
+.mobile-menu-content-leave-from {
+  opacity: 1;
+  transform: translateY(0);
+  background-color: var(--foreground);
+}
+
+.mobile-menu-content-leave-to {
+  opacity: 0;
+  transform: translateY(-0.75rem);
+  background-color: transparent;
+}

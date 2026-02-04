@@ -1,5 +1,11 @@
 @use 'variables';
 
+@mixin css-vars-from-map($map) {
+  @each $key, $value in $map {
+    --#{$key}: #{$value};
+  }
+}
+
 @mixin respond-to($breakpoint) {
   @if $breakpoint == small {
     @media screen and (max-width: 479px) { @content; }
@@ -40,19 +46,4 @@
     font-weight: variables.$font-weight-base;
     line-height: variables.$line-height-base;
   }
-}
-
-%block-shared {
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  display: flex;
-}
-
-%button-shared {
-  font-size: variables.$btn-font-size;
-  font-weight: variables.$btn-font-weight;
-  line-height: variables.$btn-line-height;
-  text-decoration: none;
-  display: inline-block;
 }

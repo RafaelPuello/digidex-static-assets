@@ -1,0 +1,27 @@
+@use "colors" as *;
+
+$theme-cyber: (
+  background: $cyber-grey-50,
+  foreground: $cyber-white,
+
+  border: rgba($cyber-blue-200, 0.2),
+  heading: $cyber-grey-800,
+  paragraph: rgba($cyber-grey-800, 0.8),
+
+  accent-a1: $cyber-blue-200,
+  accent-b1: rgba($cyber-blue-200, 0.07),
+  accent-c1: rgba($cyber-grey-800, 0.05),
+  accent-d1: $cyber-blue-100,
+  accent-e1: rgba($cyber-blue-200, 0.2),
+  accent-f1: $cyber-blue-50,
+  accent-g1: rgba($cyber-grey-800, 0.15),
+  accent-h1: rgba($cyber-grey-800, 0.6),
+
+  accent-a2: $cyber-magenta-200,
+  accent-b2: rgba($cyber-magenta-200, 0.07),
+
+  accent-a3: $cyber-green-200,
+  accent-b3: rgba($cyber-green-200, 0.07),
+
+  accent-a4: $cyber-amber-100
+)
