@@ -1,5 +1,4 @@
-@use '../abstracts/variables';
-@use '../abstracts/mixins';
+@use "../abstracts" as *;
 
 .hero-bg {
   background-size: cover;

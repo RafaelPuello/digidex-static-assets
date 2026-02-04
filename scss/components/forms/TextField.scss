@@ -1,6 +1,4 @@
-@use "@/styles/abstracts/variables";
-@use "@/styles/abstracts/mixins";
-@use "@/styles/abstracts/themes";
+@use "../../abstracts" as *;
 
 /* --------------------------
    Text Field
@@ -20,7 +18,7 @@
   line-height: 1.2;
   transition: border-color 0.3s cubic-bezier(.25, .46, .45, .94);
 
-  @include mixins.respond-to(small) {
+  @include respond-to(small) {
     margin-bottom: 0.9em;
   }
 

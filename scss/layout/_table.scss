@@ -1,5 +1,4 @@
-@use "../abstracts/variables";
-@use "../abstracts/mixins";
+@use "../abstracts" as *;
 
 /* ----------------------------------
    Tables
@@ -8,7 +7,7 @@
 .table {
   width: 100%;
   border-collapse: collapse;
-  font-size: variables.$font-size-normal;
+  font-size: $font-size-normal;
   background-color: var(--foreground);
   color: var(--paragraph);
 
@@ -22,8 +21,8 @@
 
 .table thead th {
   text-align: center;
-  font-weight: variables.$font-weight-semibold;
-  font-size: variables.$font-size-small;
+  font-weight: $font-weight-semibold;
+  font-size: $font-size-small;
   letter-spacing: 0.02em;
   text-transform: uppercase;
 
@@ -112,7 +111,7 @@
 ---------------------------------- */
 
 .table-sm {
-  font-size: variables.$font-size-small;
+  font-size: $font-size-small;
 
   thead th,
   tbody td {

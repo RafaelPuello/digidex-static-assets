@@ -1,6 +1,4 @@
-@use "abstracts/variables";
-@use "abstracts/mixins";
-@use "abstracts/themes";
+@use "../abstracts" as *;
 
 html {
   min-height: 100dvh;
@@ -48,15 +46,15 @@ h1 {
   font-weight: 700;
   line-height: 110%;
 
-  @include mixins.respond-to(small) {
+  @include respond-to(small) {
     font-size: 2.4em;
   }
 
-  @include mixins.respond-to(medium) {
+  @include respond-to(medium) {
     font-size: 3em;
   }
 
-  @include mixins.respond-to(large) {
+  @include respond-to(large) {
     font-size: 3.5em;
   }
 }
@@ -67,15 +65,15 @@ h2 {
   font-weight: 700;
   line-height: 115%;
 
-  @include mixins.respond-to(small) {
+  @include respond-to(small) {
     font-size: 1.9em;
   }
 
-  @include mixins.respond-to(medium) {
+  @include respond-to(medium) {
     font-size: 2.3em;
   }
 
-  @include mixins.respond-to(large) {
+  @include respond-to(large) {
     font-size: 2.7em;
   }
 }
@@ -86,15 +84,15 @@ h3 {
   font-weight: 700;
   line-height: 120%;
 
-  @include mixins.respond-to(small) {
+  @include respond-to(small) {
     font-size: 1.6em;
   }
 
-  @include mixins.respond-to(medium) {
+  @include respond-to(medium) {
     font-size: 1.8em;
   }
 
-  @include mixins.respond-to(large) {
+  @include respond-to(large) {
     font-size: 2em;
   }
 }
@@ -105,15 +103,15 @@ h4 {
   font-weight: 700;
   line-height: 125%;
 
-  @include mixins.respond-to(small) {
+  @include respond-to(small) {
     font-size: 1.3em;
   }
 
-  @include mixins.respond-to(medium) {
+  @include respond-to(medium) {
     font-size: 1.4em;
   }
 
-  @include mixins.respond-to(large) {
+  @include respond-to(large) {
     font-size: 1.6em;
   }
 }
@@ -124,15 +122,15 @@ h5 {
   font-weight: 700;
   line-height: 128%;
 
-  @include mixins.respond-to(small) {
+  @include respond-to(small) {
     font-size: 1.15em;
   }
 
-  @include mixins.respond-to(medium) {
+  @include respond-to(medium) {
     font-size: 1.2em;
   }
 
-  @include mixins.respond-to(large) {
+  @include respond-to(large) {
     font-size: 1.25em;
   }
 }
@@ -245,7 +243,7 @@ figcaption {
   padding: 3em 1em;
   display: flex;
 
-  @include mixins.respond-to(small) {
+  @include respond-to(small) {
     padding-top: 2em;
   }
 }
@@ -263,7 +261,7 @@ figcaption {
   display: flex;
   box-shadow: 0 15px 25px -10px var(--accent-c1);
 
-  @include mixins.respond-to(small) {
+  @include respond-to(small) {
     padding: 2em;
   }
 }
@@ -282,7 +280,7 @@ figcaption {
   align-items: center;
   display: flex;
 
-  @include mixins.respond-to(small) {
+  @include respond-to(small) {
     padding-top: 3em;
   }
 }
@@ -306,12 +304,12 @@ figcaption {
   padding: 3.75em 2em;
   /* display: flex; */
 
-  @include mixins.respond-to(medium) {
+  @include respond-to(medium) {
     padding-top: 3em;
     padding-bottom: 3em;
   }
 
-  @include mixins.respond-to(small) {
+  @include respond-to(small) {
     padding: 2.5em 1.5em;
   }
 }

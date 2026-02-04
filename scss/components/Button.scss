@@ -1,6 +1,4 @@
-@use "../abstracts/variables";
-@use "../abstracts/mixins";
-@use "../abstracts/themes";
+@use '../abstracts' as *;
 
 .button {
   cursor: pointer;
@@ -71,7 +69,7 @@ input.button {
   margin-top: 1em;
   display: flex;
 
-  @include mixins.respond-to(small) {
+  @include respond-to(small) {
     flex-direction: column;
     align-items: flex-start;
   }

@@ -1,6 +1,4 @@
-@use "@/styles/abstracts/variables";
-@use "@/styles/abstracts/mixins";
-@use "@/styles/abstracts/themes";
+@use "../../abstracts" as *;
 
 .textarea {
   display: block;

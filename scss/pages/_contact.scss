@@ -1,5 +1,4 @@
-@import '../abstracts/variables';
-@import '../abstracts/mixins';
+@use "../abstracts" as *;
 
 .contact {
   z-index: 50;

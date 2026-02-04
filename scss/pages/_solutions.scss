@@ -1,5 +1,4 @@
-@import '../abstracts/variables';
-@import '../abstracts/mixins';
+@use "../abstracts" as *;
 
 .grid-solutions {
   grid-column-gap: 1.5em;

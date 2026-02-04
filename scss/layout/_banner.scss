@@ -1,5 +1,4 @@
-@use '../abstracts/variables';
-@use '../abstracts/mixins';
+@use "../abstracts" as *;
 
 .grid-banner {
   grid-column-gap: 0em;

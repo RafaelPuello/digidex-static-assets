@@ -1,6 +1,4 @@
-@use "../abstracts/variables";
-@use "../abstracts/mixins";
-@use "../abstracts/themes";
+@use "../abstracts" as *;
 
 .account-form {
   z-index: 50;
@@ -19,7 +17,7 @@
   position: relative;
   box-shadow: 0 15px 25px -10px var(--accent-c1);
 
-  @include mixins.respond-to(small) {
+  @include respond-to(small) {
     padding: 2em;
   }
 
@@ -47,7 +45,7 @@
   max-width: 23em;
   margin-bottom: 1.8em;
 
-  @include mixins.respond-to(small) {
+  @include respond-to(small) {
     margin-bottom: 1em;
   }
 

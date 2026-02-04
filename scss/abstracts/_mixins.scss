@@ -1,11 +1,5 @@
 @use 'variables';
 
-@mixin css-vars-from-map($map) {
-  @each $key, $value in $map {
-    --#{$key}: #{$value};
-  }
-}
-
 @mixin respond-to($breakpoint) {
   @if $breakpoint == small {
     @media screen and (max-width: 479px) { @content; }
