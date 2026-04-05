@@ -37,17 +37,85 @@ main.scss                    # Entry point - imports all layers
 
 ## Theming
 
-Themes are defined in `abstracts/_themes.scss` as Sass maps. The active theme is set via `$active-theme-name` and CSS custom properties are generated at `:root`.
+Themes are defined in `abstracts/_themes.scss` as Sass maps with color palettes:
 
-Current themes: `g` (green - default), `b` (blue)
+**Current themes:**
+- `g` (green - default) - Primary: #4CAF50, Secondary: #2196F3
+- `b` (blue) - Primary: #2196F3, Secondary: #4CAF50
 
-To switch themes, change `$active-theme-name` in `_themes.scss`.
+**To switch themes**, edit `abstracts/_themes.scss`:
+```scss
+$active-theme-name: 'g';  // Change to 'b' or add new theme
+```
+
+**CSS Custom Properties** are auto-generated at `:root`:
+```css
+:root {
+  --color-primary: #4CAF50;
+  --color-secondary: #2196F3;
+  --color-accent: #FF9800;
+  /* ... more colors ... */
+}
+```
+
+Use in CSS/SCSS:
+```scss
+.button {
+  background: var(--color-primary);
+  color: white;
+}
+```
+
+**Adding a new theme:**
+1. Add to `$themes` map in `_themes.scss`:
+   ```scss
+   'dark': (
+     'primary': #BB86FC,
+     'secondary': #03DAC6,
+     // ... other colors
+   )
+   ```
+2. Change `$active-theme-name: 'dark'`
+3. Recompile: `python manage.py sass -g custom.scss output.css`
 
 ## Import Pattern
 
-All modules expose content via `_index.scss` files using `@forward`. Consumer files should use:
+All modules expose content via `_index.scss` files using `@forward`. This allows clean imports:
 
+**Import all abstracts** (variables, themes, mixins available without namespace):
 ```scss
-@use "abstracts" as *;  // Makes all abstract members available
-@use "base";            // Namespaced imports for other layers
+@use "abstracts" as *;
+
+.element {
+  color: $text-primary;           // Variable from abstracts
+  padding: map-get($active-theme, 'primary');  // Access theme
+  @include flex-center;           // Mixin from abstracts
+}
+```
+
+**Import specific module with namespace**:
+```scss
+@use "abstracts/colors" as colors;
+@use "base";
+
+.element {
+  background: colors.$primary;    // Namespaced access
+  color: base.$text-color;        // From base layer
+}
+```
+
+**Import compiled CSS output**:
+```scss
+// For consumers that don't process SCSS
+@import "css/main.css";  // Compiled output
+```
+
+**Full layer imports** (for building on top of all styles):
+```scss
+@use "main.scss" as *;  // Brings in all layers: abstracts, base, layout, components
+
+.custom-element {
+  @extend %clearfix;    // Use utilities from base
+  @include breakpoint-md { /* responsive */ }  // Use mixins from abstracts
+}
 ```
