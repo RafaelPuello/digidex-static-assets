@@ -25,7 +25,7 @@
 
 .solutions {
   grid-row-gap: 1.2em;
-  background-color: $white;
+  background-color: #ffffff;
   border-radius: .87em;
   flex-direction: column;
   justify-content: flex-start;
@@ -33,7 +33,7 @@
   padding: 2.5em;
   display: flex;
   position: relative;
-  box-shadow: 0 15px 25px -10px $shadow-c1;
+  box-shadow: 0 15px 25px -10px var(--accent-c1);
 
   @include respond-to(medium) {
     padding: 2.2em;
@@ -85,48 +85,46 @@
   }
 
   &.red {
-    background-color: $secondary-b2;
+    background-color: var(--accent-b2);
   }
 
   &.blue {
-    background-color: $secondary-b3;
+    background-color: var(--accent-b3);
   }
 
   &.green {
-    background-color: $secondary-b1;
+    background-color: var(--accent-b1);
   }
 }
 
 .heading-solution-large {
-  color: $primary-a1;
+  color: var(--accent-a1);
 
   &.red {
-    color: $primary-a2;
+    color: var(--accent-a2);
   }
 
   &.blue {
-    color: $primary-a3;
+    color: var(--accent-a3);
   }
 
   &.green {
-    color: $primary-a1;
+    color: var(--accent-a1);
   }
 }
 .paragraph-solution-large {
-  color: $primary-a1;
-
-  color: $primary-a1;
+  color: var(--accent-a1);
 
   &.red {
-    color: $primary-a2;
+    color: var(--accent-a2);
   }
 
   &.blue {
-    color: $primary-a3;
+    color: var(--accent-a3);
   }
 
   &.green {
-    color: $primary-a1;
+    color: var(--accent-a1);
   }
 }
 
@@ -140,14 +138,14 @@
   display: flex;
 
   &.red {
-    color: $primary-a2;
+    color: var(--accent-a2);
   }
 
   &.blue {
-    color: $primary-a3;
+    color: var(--accent-a3);
   }
 
   &.green {
-    color: $primary-a1;
+    color: var(--accent-a1);
   }
 }

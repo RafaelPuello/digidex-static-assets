@@ -59,7 +59,7 @@
   letter-spacing: .05em;
   text-transform: uppercase;
   margin-bottom: .8em;
-  font-family: $w-font-mono;
+  font-family: var(--font-mono);
   font-size: .7em;
   font-weight: $font-weight-normal;
   line-height: $line-height-normal;

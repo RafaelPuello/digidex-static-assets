@@ -29,13 +29,13 @@
 }
 
 .block-post {
-  background-color: $white;
+  background-color: #ffffff;
   border-radius: .87em;
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
   display: flex;
-  box-shadow: 0 15px 25px -10px $shadow-c1;
+  box-shadow: 0 15px 25px -10px var(--accent-c1);
 
   &.large {
     grid-column-gap: 0em;
@@ -143,7 +143,7 @@
   letter-spacing: .05em;
   text-transform: uppercase;
   margin-bottom: .8em;
-  font-family: $w-font-mono;
+  font-family: var(--font-mono);
   font-size: .7em;
   font-weight: $font-weight-normal;
   line-height: $line-height-normal;
@@ -160,11 +160,11 @@
 
 .post-body {
   box-sizing: border-box;
-  background-color: $white;
+  background-color: #ffffff;
   border-radius: .87em;
   width: 100%;
   padding: 4em 13%;
-  box-shadow: 0 15px 25px -10px $shadow-c1;
+  box-shadow: 0 15px 25px -10px var(--accent-c1);
 
   @include respond-to(large) {
     padding-left: 10%;

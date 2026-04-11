@@ -1,22 +1,3 @@
-@use 'themes';
-
-:root {
-  --white: white;
-
-  @include themes.css-vars-from-map(themes.$light-theme);
-
-  --font-sans: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, sans-serif;
-  --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular,
-    Menlo, Monaco, Consolas, monospace;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    @include themes.css-vars-from-map(themes.$dark-theme);    
-  }
-}
-
 /// Body
 ///
 /// Settings for the `<body>` element.

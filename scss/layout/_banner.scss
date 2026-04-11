@@ -3,7 +3,7 @@
 .grid-banner {
   grid-column-gap: 0em;
   grid-row-gap: 0em;
-  background-color: $primary-a1;
+  background-color: var(--accent-a1);
   border-radius: .87em;
   grid-template-rows: auto;
   align-items: center;

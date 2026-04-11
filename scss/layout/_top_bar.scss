@@ -1,7 +1,7 @@
 @use "../abstracts" as *;
 
 .section-top-bar {
-  background-color: $primary-a1;
+  background-color: var(--accent-a1);
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -51,7 +51,7 @@
 
 .info-top-bar {
   opacity: .7;
-  color: $white;
+  color: var(--neutral-200);
   letter-spacing: -.02em;
   font-size: .87em;
   line-height: $line-height-small;
@@ -77,7 +77,7 @@
 }
 
 .text-top-bar {
-  color: $white;
+  color: var(--neutral-200);
   letter-spacing: -.02em;
   font-size: .87em;
   line-height: $line-height-small;

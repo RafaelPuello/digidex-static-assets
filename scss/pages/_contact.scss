@@ -2,7 +2,7 @@
 
 .contact {
   z-index: 50;
-  background-color: $white;
+  background-color: #ffffff;
   text-align: center;
   border-radius: .87em;
   flex-direction: column;
@@ -16,7 +16,7 @@
   padding: 3.1em;
   display: flex;
   position: relative;
-  box-shadow: 0 15px 25px -10px $shadow-c1;
+  box-shadow: 0 15px 25px -10px var(--accent-c1);
 
   @include respond-to(small) {
     padding: 2em;
@@ -37,7 +37,7 @@
 
 .contact-lottie-link {
   grid-column-gap: 1.44em;
-  background-color: $secondary-b1;
+  background-color: var(--accent-b1);
   -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
   border-radius: .64em;
@@ -61,7 +61,7 @@
   }
 
   &:hover {
-    box-shadow: inset 0 0 0 2px $primary-a1;
+    box-shadow: inset 0 0 0 2px var(--accent-a1);
   }
 
   &.a2 {
@@ -87,7 +87,7 @@
 }
 
 .block-icon-contact-lottie {
-  background-color: $white;
+  background-color: #ffffff;
   border-radius: .87em;
   flex-direction: column;
   justify-content: center;
@@ -95,11 +95,11 @@
   margin-left: -.94em;
   padding: 1.1em;
   display: flex;
-  box-shadow: 0 15px 25px -10px $shadow-c1;
+  box-shadow: 0 15px 25px -10px var(--accent-c1);
 }
 
 .heading-contact-lottie {
-  color: $primary-a1;
+  color: var(--accent-a1);
   font-weight: $font-weight-normal;
 }
 
@@ -112,7 +112,7 @@
 
 .text-contact-lottie {
   opacity: .5;
-  color: $primary-a1;
+  color: var(--accent-a1);
   letter-spacing: -.02em;
   max-width: 11em;
   font-size: .87em;
