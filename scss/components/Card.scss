@@ -1,0 +1,14 @@
+@use '../abstracts' as *;
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  background-color: var(--foreground);
+  box-shadow: 0 2px 8px -2px var(--accent-c1);
+  transition: box-shadow 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 8px 20px -4px var(--accent-e1);
+  }
+}
