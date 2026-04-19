@@ -119,3 +119,71 @@ All modules expose content via `_index.scss` files using `@forward`. This allows
   @include breakpoint-md { /* responsive */ }  // Use mixins from abstracts
 }
 ```
+
+## Floating Labels (CSS-Only)
+
+A pure CSS floating label implementation using the `:not(:placeholder-shown)` selector. No JavaScript required.
+
+**Files:**
+- `components/forms/TextField.scss` - Input field styles + floating label CSS
+- `components/forms/_index.scss` - Module export
+
+**How It Works:**
+
+The label floats based on CSS pseudo-selectors:
+- **At rest** (no value): Label positioned inside input with transparent background
+- **On focus OR input has value**: Label floats above input border with background color to create visual gap
+
+```scss
+// Base state - label inside input
+.text-field + .form-label {
+  position: absolute;
+  top: 1.25em;
+  background-color: transparent;  // No visible background
+  transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+
+// Floating state - label above input
+.text-field:focus + .form-label,
+.text-field:not(:placeholder-shown) + .form-label {
+  top: 0.3em;
+  font-size: 0.75rem;
+  background-color: var(--foreground);  // Covers border line
+  color: var(--accent-a1);
+}
+```
+
+**HTML Structure:**
+
+```html
+<div class="field-group">
+  <input class="text-field" type="text" placeholder="Label Text" />
+  <label class="form-label">Label Text</label>
+</div>
+```
+
+**Key Points:**
+- `.field-group` must be `position: relative` to anchor absolute-positioned label
+- Placeholder and label should have the same text (placeholder is invisible, label shows)
+- Label background matches input background to hide border line when floating
+- Works in all modern browsers (`:not(:placeholder-shown)` supported in Chrome 105+, Firefox 78+, Safari 15.4+)
+- No class manipulation or JavaScript events needed
+
+**Variant: Transparent Input**
+
+For inputs with transparent backgrounds (e.g., dark theme):
+
+```scss
+.text-field.transparent + .form-label {
+  background-color: transparent;  // No background for transparent variants
+}
+
+.text-field.transparent:focus + .form-label,
+.text-field.transparent:not(:placeholder-shown) + .form-label {
+  color: var(--foreground);
+}
+```
+
+**Used By:**
+- Account forms in ID service (`id/frontend/src/components/forms/`)
+- App service forms (`app/frontend/src/components/forms/`)
