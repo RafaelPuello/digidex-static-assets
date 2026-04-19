@@ -1,0 +1,45 @@
+@use '../abstracts' as *;
+
+// Floating Labels
+// Animated labels that float up and shrink when input is focused or filled.
+// Applied dynamically by floatingLabels.ts utility.
+
+.text-field-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.floating-label {
+  position: absolute;
+  top: 0.8em;
+  right: 1.2em;
+  font-size: 1em;
+  color: var(--accent-h1);
+  pointer-events: none;
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-origin: top right;
+  font-weight: 400;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+  z-index: 1;
+
+  // When label is floating (focused or filled)
+  &.floating {
+    font-size: 0.75em;
+    top: -0.8em;
+    color: var(--accent-a1);
+  }
+
+  // Transparent variant styling
+  .text-field.transparent:focus ~ &,
+  .text-field.transparent.has-value ~ & {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  // Default state for transparent
+  .text-field.transparent ~ & {
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
