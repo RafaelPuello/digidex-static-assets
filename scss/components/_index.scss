@@ -11,7 +11,7 @@
 @forward "_embeds";
 @forward "_faqs";
 @forward "_features";
-@forward "_floating-labels";
+@forward "forms";
 @forward "_info";
 @forward "_links";
 @forward "_list";
@@ -37,5 +37,3 @@
 @forward "_subtitles";
 @forward "_tags";
 @forward "_team";
-// Note: form component directory was deleted as dead code (April 2026)
-// Form styles are handled by Ecommerce.scss (.ecommerce-form)

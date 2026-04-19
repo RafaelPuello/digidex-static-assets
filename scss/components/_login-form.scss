@@ -113,47 +113,9 @@
   }
 }
 
-// ── Text field wrapper for floating labels ──────────────────────────
-
-.text-field-wrapper {
-  position: relative;
-  width: 100%;
-}
-
-// ── Floating label styling ──────────────────────────────────────────
-
-.floating-label {
-  position: absolute;
-  top: 0.8em;
-  left: 1.2em;
-  font-size: 1em;
-  color: var(--accent-h1);
-  pointer-events: none;
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transform-origin: left top;
-  font-weight: 400;
-  background-color: var(--accent-b1);
-  padding: 0 0.2em;
-  margin: 0;
-  border: none;
-  z-index: 1;
-}
-
-.text-field-wrapper.focused .floating-label {
-  font-size: 0.75em;
-  top: -0.5em;
-  color: var(--accent-a1);
-}
-
-// Transparent variant floating label
-.text-field.transparent ~ .floating-label {
-  background-color: transparent;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.text-field-wrapper.focused .text-field.transparent ~ .floating-label {
-  color: rgba(255, 255, 255, 0.9);
-}
+// ── Floating label styles are now in forms/TextField.scss ──────────────────────
+// This file no longer includes floating label styles to avoid duplication.
+// All floating label functionality is CSS-only and defined in forms/TextField.scss
 
 // ── Text field styling with floating labels ──────────────────────────
 
